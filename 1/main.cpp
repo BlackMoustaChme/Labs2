@@ -1,5 +1,4 @@
-//A.N.E.I.D.A Applying New Element In Dynamic Array
-//D.E.D.A Deleting Elements Of Dynamic Array
+
 #include <iostream>
 #define _USE_MATH_DEFINES
 #include <cmath>
@@ -33,12 +32,13 @@ int main()
     cout<<"Enter q = ";
     cin>>q;
     Task7b(arr,n,q);
+
     cout<<"Enter g = ";
     cin>>g;
     Task8(arr,n,g);
-    /*cout<<"Enter t = ";
+    cout<<"Enter t = ";
     cin>>t;
-    DelArr(arr,n,t);*/
+    DelArr(arr,n,t);
     PrintArr(arr,n);
     delete[] arr;
     return 0;
@@ -62,7 +62,7 @@ void FillArr(double *arr, int n)
         for (int i=0;i<n;i++)
     {
         //arr[i]=i;
-        arr[i]= rand() % 10;
+        arr[i]= rand() % 5;
     }
 }
 void Reassign(double *&arr, int &n,int k,double f)
@@ -138,12 +138,13 @@ void Task7b(double *&arr, int &n,double f)
 void Task8(double *&arr, int &n,double f)
 {
     int r=-1;
-    for(int i=0;i<n;i++)
+    for(int i=0;i<=n;i++)
     {
         if(arr[i]==f)
         {
             DelArr(arr,n,i+1);
             r++;
+            i--;
         }
     }
     if(r==-1)
