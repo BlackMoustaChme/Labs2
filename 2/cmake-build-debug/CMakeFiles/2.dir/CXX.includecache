@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+F:/Chernousov/labs2/2/main.cpp
+iostream
+-
+cmath
+-
+math.h
+-
+ctime
+-
+fstream
+-
+algorithm
+-
+string
+-
+
