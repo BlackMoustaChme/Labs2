@@ -8,34 +8,40 @@
 #include <iomanip>
 using namespace std;
 int GetN ();
-void NewMatr (int **& , int , int );
 void NewMatr(double **& , int , int );
-void DelMatr(int **& , int , int );
 void DelMatr(double **& , int , int );
 void GetMatr(double ** , int , int );
-void PrintMatr(int ** , int , int , const char* );
 void PrintMatr(double ** , int , int , const char* );
 void PrintVect(double* x, int n, const char* );
 bool GetFileMatr(double ** , int , int , const char* );
 void PrintFileMatr(double ** , int , int , const char* );
 void GetMatrR(double ** , int , int ,int , int );
 void Mult(double** , double** , double** , int , int ,int , int );
-void Transpos (double **, double **, int , int);
 void TriangMatr (double** , double** , int );
 void Solve (double ** , double *, int );
 void clone(double**& , int , int , double** );
+//double det(double** , int , int );
+
+bool minor(double**& , int , int , double &);
+void reshuffle(double**& , int , int, int , double &);
+bool SolveAP(double **&, double *, int , int , double &);
 double det(double** , int , int );
+bool reverbAP(double** , int , int , double &, double**& );
+
 void Menu();
 void MaR();
 void MaF();
 void MaE();
 void MaNorS();
 void MaH();
-void SoSLAE(double **,int , int );
-void FIM(double **,int , int );
+void SoSLAE(double **,int , int ,double);
+void FIM(double **,int , int,double);
 void check1(double** , int , int , double *);
+void check2(double**, double**, int, int, int , int);
 int main()
 {
+    cout<<"Liakhim: Yrros, ris, tub siht si ton 001% lanigiro"<<endl;
+    //cout<<"BA WEEP GRANAH WEEP NINI BONG!"<<endl;
     Menu();
     return 0;
 }
@@ -85,8 +91,9 @@ void MaR()
 {
     int n,m,a,b;
     n=GetN();
-    m=GetN();
+    m=n+1;
     double **A;
+    double Det=1;
     NewMatr(A, n, m);
     cout<<"Enter [a,b] for randomizer"<<endl;
     cout<<"Enter a = ";cin>>a;
@@ -107,10 +114,10 @@ void MaR()
 
         switch (key) {
             case 1:
-                SoSLAE(A,n,m);
+                SoSLAE(A,n,m,Det);
                 break;
             case 2:
-                FIM(A,n,m);
+                FIM(A,n,m,Det);
                 break;
             case 0:
                 DelMatr(A,n,m);
@@ -125,8 +132,9 @@ void MaF()
 {
     int n,m;
     n=GetN();
-    m=GetN();
+    m=n+1;
     double **A;
+    double Det=1;
     NewMatr(A, n, m);
     if(!GetFileMatr(A,n,m,"Array.txt"))
         /*PrintMatr(A,n,m,"A");*/cout << "--->Error..."<<endl;
@@ -145,10 +153,10 @@ void MaF()
 
         switch (key) {
             case 1:
-                SoSLAE(A,n,m);
+                SoSLAE(A,n,m,Det);
                 break;
             case 2:
-                FIM(A,n,m);
+                FIM(A,n,m,Det);
                 break;
             case 0:
                 DelMatr(A,n,m);
@@ -163,8 +171,9 @@ void MaE()
 {
     int n,m;
     n=GetN();
-    m=GetN();
+    m=n+1;
     double **A;
+    double Det=1;
     NewMatr(A, n, m);
     for(int i = 0; i < n; i++)
         for(int j = 0; j < m; j++)
@@ -184,10 +193,10 @@ int key;
 
         switch (key) {
             case 1:
-                SoSLAE(A,n,m);
+                SoSLAE(A,n,m,Det);
                 break;
             case 2:
-                FIM(A,n,m);
+                FIM(A,n,m,Det);
                 break;
             case 0:
                 DelMatr(A,n,m);
@@ -202,8 +211,9 @@ void MaNorS()
 {
     int n,m;
     n=GetN();
-    m=GetN();
+    m=n+1;
     double **A;
+    double Det=1;
     NewMatr(A, n, m);
         int key2;
 
@@ -230,7 +240,7 @@ void MaNorS()
                 break;
             case 0:
                 cout << " ---- " << endl;
-                return;
+                break;
             default:
                 cout << "--->Error, try again... " << endl;
         }
@@ -249,10 +259,10 @@ int key;
 
         switch (key) {
             case 1:
-                SoSLAE(A,n,m);
+                SoSLAE(A,n,m,Det);
                 break;
             case 2:
-                FIM(A,n,m);
+                FIM(A,n,m,Det);
                 break;
             case 0:
                 DelMatr(A,n,m);
@@ -267,7 +277,8 @@ void MaH()
 {
     int n,m;
     n=GetN();
-    m=GetN();
+    m=n+1;
+    double Det=1;
     double **A;
     NewMatr(A, n, m);
     for(int i = 0; i < n; i++)
@@ -281,17 +292,17 @@ int key;
         cout << " 1 - Solvation of SLAE " << endl;
         cout << " 2 - Finding the Inverse Matrix " << endl;
         cout << " 0 - Exit" << endl;
-        cout << " ----- " << endl;
+        cout << " Please continue " << endl;
 
         cout << "Choose what to do and enter the key " << endl;
         cin >> key;
 
         switch (key) {
             case 1:
-                SoSLAE(A,n,m);
+                SoSLAE(A,n,m,Det);
                 break;
             case 2:
-                FIM(A,n,m);
+                FIM(A,n,m,Det);
                 break;
             case 0:
                 DelMatr(A,n,m);
@@ -302,10 +313,28 @@ int key;
         }
     } while (key);
 }
-void SoSLAE(double **A,int n, int m)
+void SoSLAE(double **A,int n, int m, double Det)
 {
-    PrintMatr(A,n,m,"A");
-    double** buff;
+    double *x = new double [n];
+    double ** B;
+    NewMatr(B, n, m);
+    clone(A, n, m, B);
+    double ** Ac;
+    NewMatr(Ac, n, m);
+    clone(A, n, m, Ac);
+    //double Det=1;
+    PrintMatr(Ac,n,m,"A");
+    if (SolveAP(Ac, x, n, m, Det))
+  {
+    check1(B, n, m, x);
+  }
+  else cout << "no single solution" << endl;
+  cout <<endl<< "det = " << Det * det(Ac, n, m) << endl;
+  DelMatr(B, n, m);
+  DelMatr(Ac, n, m);
+  delete [] x;
+  x = NULL;
+    /*double** buff;
     NewMatr(buff, n, m);
     double** B;
     NewMatr(B, n, n+1);
@@ -323,45 +352,23 @@ void SoSLAE(double **A,int n, int m)
     check1(A,n,m,x);
     DelMatr(B,n,n+1);
     //DelMatr(A,n,m);
-    delete[]x;x=NULL;
+    delete[]x;x=NULL;*/
 
 }
-void FIM(double **A,int n, int m)
+void FIM(double **A,int n, int m, double Det)
 {
-    double *x = new double [n];
     PrintMatr(A,n,m,"A");
-    double** B;
-    NewMatr(B, n, m-1);
-    clone(A, n, m-1, B);
-    PrintMatr(B,n,m-1,"B");
-    double** D;
-    NewMatr(D, n, m-1);
-    TriangMatr(A, D, n);
-    //double det=det(buff,n,m);
-    cout<<endl<<det(D,n,m);
-    //Solve (A,x,n);
-    for(int i = 0; i < n; i++)
-    {
-        double** buff;
-        NewMatr(buff, n, m);
-        clone(A, n, m, buff);
-        for(int j = 0; j < n; j++)
-        {
-            if (i == j) buff[j][m - 1] = 1;
-            else buff[j][m - 1] = 0;
-        }
-        Solve(buff, x, n);
-        for(int j = 0; j < n; j++)
-            B[j][i] = x[j];
-        DelMatr(buff, n, m);
-    }
-    delete [] x;
-    x = NULL;
-    PrintMatr(B,n,m-1,"B");
-    //Mult(A, B, n, m - 1, n, n);
-    //check2();
-    DelMatr(B,n,m);
-    DelMatr(A,n,m);
+    double **rev;
+    //double Det=1;
+    NewMatr(rev, n, n);
+
+    if (reverbAP(A, n, m, Det, rev))
+  {
+    PrintMatr(rev, n, n, "rev");
+    check2(A, rev, n, m - 1, n, n);
+  }
+  else cout << "no reverb" << endl;
+    DelMatr(rev, n, n);
 }
 void clone(double**& M, int n, int m, double** M1)
 {
@@ -371,7 +378,7 @@ void clone(double**& M, int n, int m, double** M1)
             M1[i][j] = M[i][j];
         }
 }
-double det(double** M, int n, int m)
+/*double det(double** M, int n, int m)
 {
     double det = 1;
     for(int i = 0; i < n; i++)
@@ -380,7 +387,7 @@ double det(double** M, int n, int m)
         det *= M[i][i];
     }
     return det;
-}
+}*/
 void check1(double** M1, int n, int m, double *x)
 {
     double epsilon = 0;
@@ -396,7 +403,89 @@ void check1(double** M1, int n, int m, double *x)
         if (fabs(M1[i][m - 1] - s) > epsilon) epsilon = fabs(M1[i][m - 1] - s);
     }
     //return epsilon;
-    cout<<epsilon;
+    cout<<"epsilon = "<<epsilon;
+}
+void reshuffle(double**& M, int n, int m, int k, double &Det)
+{
+  for (int i = k + 1; i < n; i++)
+  {
+    if (M[i][k] != 0)
+    {
+      double temp;
+      for (int i1 = 0; i1 < m; i1++)
+      {
+        temp = M[k][i1];
+        M[k][i1] = M[i][i1];
+        M[i][i1] = temp;
+      }
+      Det *= -1;
+      break;
+    }
+  }
+}
+bool minor(double**& M, int n, int m, double &Det)
+{
+  for (int  i = 0; i < n ; i++)
+  {
+    if (M[i][i] == 0) reshuffle(M, n, m, i, Det);
+    if (M[i][i] == 0) return false;
+    for (int i1 = i + 1; i1 < n; i1++)
+      for (int i2 = i + 1; i2 < m; i2++)
+        M[i1][i2] = M[i][i] * M[i1][i2] - M[i][i2] * M[i1][i];
+    for (int j = i + 1; j < n; j++)
+    {
+      M[j][i] = 0;
+    }
+  }
+  return true;
+}
+bool SolveAP(double **&M, double *x, int n, int m, double &Det)
+{
+  double res = 0;
+  if (!minor(M, n, m, Det)) return false;
+  for(int i = n - 1; i >= 0; i--)
+  {
+    res = 0;
+    for(int j = i + 1; j <= n - 1; j++)
+      res = res - x[j] * M[i][j];
+    res += M[i][n];
+    x[i] = res / M[i][i];
+  }
+  return true;
+}
+double det(double** M, int n, int m)
+{
+  double det = 1;
+  for(int i = 0; i < n; i++)
+  {
+    if (M[i][i] == 0) return 0;
+    det *= M[i][i] / pow(M[i][i], n - 1 - i);
+  }
+  return det;
+}
+bool reverbAP(double** M, int n, int m, double &Det, double**& rev)
+{
+  double *x = new double [n];
+  bool metka = true;
+  for(int i = 0; i < n; i++)
+  {
+    double** buff;
+    NewMatr(buff, n, m);
+    clone(M, n, m, buff);
+    for(int j = 0; j < n; j++)
+    {
+      if (i == j) buff[j][m - 1] = 1;
+      else buff[j][m - 1] = 0;
+    }
+    if (!SolveAP(buff, x, n, m, Det)) metka = false;
+    //PrintVect(x, n, "x");
+    for(int j = 0; j < n; j++)
+      rev[j][i] = x[j];
+    DelMatr(buff, n, m);
+  }
+  delete [] x;
+  x = NULL;
+  return metka;
 }
 int GetN ()
 {
@@ -412,24 +501,6 @@ int GetN ()
     }
     while (n<=0 || (n-(int)n));
     return n;
-}
-void NewMatr (int **& M, int n, int m)
-{
-    cout<<"\t -New int Matr-"<<endl;
-    M=new int* [n];
-    for (int i=0;i<n;i++)
-    {
-        M[i]=new int [m];
-    }
-}
-void DelMatr (int **& M, int n, int m)
-{
-    cout<<"\t -Delete int Matr-"<<endl;
-    for (int i=0;i<n;i++)
-    {
-        delete []M[i];
-    }
-    delete []M;
 }
 void NewMatr (double **& M, int n, int m)
 {
@@ -448,30 +519,6 @@ void DelMatr (double **& M, int n, int m)
         delete []M[i];
     }
     delete []M;
-}
-void GetMatr (double ** M, int n, int m)
-{
-    cout<<"Enter Matrix, sized "<<n<<" x "<<m<<" : "<<endl;
-    for(int i=0;i<n;i++)
-    {
-        for(int j=0;j<m;j++)
-        {
-            cin>>M[i][j];
-        }
-    }
-}
-void PrintMatr (int ** M, int n, int m, const char* namae)
-{
-    cout<<endl<<" "<<namae<<":"<<endl;
-    for(int i=0;i<n;i++)
-    {
-        for(int j=0;j<m;j++)
-        {
-            cout<<setw(5)<<M[i][j];
-        }
-        cout<<endl;
-    }
-    cout<<endl;
 }
 void PrintMatr (double ** M, int n, int m, const char* namae)
 {
@@ -519,20 +566,7 @@ bool GetFileMatr (double ** M, int n, int m, const char* name)
     f.close();
     return true;
 }
-void PrintFileMatr (double ** M, int n, int m, const char* name)
-{
-    ofstream f(name);
-    for (int i=0;i<n;i++)
-    {
-        for(int j=0;j<m;j++)
-        {
-            f<<setw(5)<<M[i][j];
-        }
-        f<<endl;
-    }
-    f<<endl;
-    f.close();
-}
+
 void GetMatrR (double ** M, int n, int m,int a, int b)
 {
     srand(time(0));
@@ -544,7 +578,7 @@ void GetMatrR (double ** M, int n, int m,int a, int b)
         }
     }
 }
-void Mult (double** M1, double** M2, double** res, int n1, int m1,int n2, int m2)
+/*void Mult (double** M1, double** M2, double** res, int n1, int m1,int n2, int m2)
 {
     int S;
     if(m1!=n2)
@@ -562,16 +596,6 @@ void Mult (double** M1, double** M2, double** res, int n1, int m1,int n2, int m2
                 S+=M1[i][k]*M2[k][j];
             }
             res[i][j]=S;
-        }
-    }
-}
-void Transpos (double **M1, double **M2, int n, int m)
-{
-    for(int i=0;i<n;i++)
-    {
-        for(int j=0;j<m;j++)
-        {
-            M1[i][j]=M2[j][i];
         }
     }
 }
@@ -615,4 +639,25 @@ void Solve (double ** A, double *x, int n)
         x[i]=res/B[i][i];
     }
     DelMatr(B,n,n+1);
+}*/
+void check2(double** M1, double** M2, int n1, int m1, int n2, int m2)
+{
+  double** buff;
+  NewMatr(buff, n1, m2);
+  double S;
+  if(m1 != n2)
+  {
+    cout << "error" << endl;
+    DelMatr(buff, n1, m2);
+  }
+  for(int i = 0; i < n1; i++)
+    for(int j = 0; j < m2; j++)
+    {
+      S = 0;
+      for(int k = 0; k < m1; k++)
+        S += M1[i][k] * M2[k][j];
+      buff[i][j] = S;
+    }
+  PrintMatr(buff, n1, m2, "proverka");
+  DelMatr(buff, n1, m2);
 }
