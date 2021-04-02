@@ -392,6 +392,7 @@ void check1(double** M1, int n, int m, double *x)
 {
     double epsilon = 0;
     double s;
+    PrintVect(x,n,"x");
     for(int i = 0; i < n; i++)
     {
         s = 0;
@@ -527,7 +528,7 @@ void PrintMatr (double ** M, int n, int m, const char* namae)
     {
         for(int j=0;j<m;j++)
         {
-            cout<<setw(5)<<M[i][j];
+            cout<<setw(15)<<M[i][j];
         }
         cout<<endl;
     }
