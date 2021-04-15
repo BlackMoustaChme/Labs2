@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <dos.h>
 using namespace std;
 
 struct Cars{
@@ -79,10 +80,86 @@ void MyStack::deletion(Cars& k){
     while (Count !=0) Pop(k);
 }
 
+struct warehouse {
+    double Price;
+    int Amount;
+    void out();
+};
+
+void warehouse::out() {
+    cout << "Price: " << Price << " " << "Amount: " << Amount<<endl;
+}
+
+struct MyQueue
+{
+    struct Node
+    {
+        warehouse data;
+        Node* next;
+    };
+    Node* First = NULL;
+    int Count = 0;
+    int payment = 0;
+    int MinPrice = 0;
+    int full = 0;
+    bool Push(warehouse);
+    bool Pop(warehouse&);
+    void Info();
+};
+bool MyQueue::Push(warehouse data)
+{
+    if (!First)
+    {
+        First = new Node;
+        First->next = NULL;
+        First->data = data;
+        Count = 1;
+        MinPrice=First->data.Price;
+    }
+    else
+    {
+        Node* temp;
+        temp = First;
+        while (temp->next != NULL) temp = temp->next;
+        temp->next = new Node;
+        temp->next->data = data;
+        temp->next->next = NULL;
+        Count++;
+        if (MinPrice<First->data.Price) MinPrice=First->data.Price;
+    }
+    return true;
+}
+bool MyQueue::Pop(warehouse& data)
+{
+    if (!First) return false;
+    Node* temp = First->next;
+    data = First->data;
+    delete First;
+    First = temp;
+    Count--;
+    return true;
+}
+void MyQueue::Info()
+{
+    if (!First) cout << "Queue is empty" << endl;
+    else
+    {
+        cout << endl << "Queue info: " << endl;
+        cout << "\tQueue size = " << Count << endl;
+        First->data.out();
+    }
+}
+
+void menu(MyQueue q);
+
 void read(MyStack&,string);
 void FindCr(MyStack&,Cars);
 void Add(MyStack&, Cars);
 void Search(MyStack&, Cars);
+void AddPr(MyQueue& , warehouse& , double&, int& );
+void Sell(MyQueue& , warehouse& , double& , int& );
+void MenuG();
+void MenuW();
 void Menu();
 
 int main()
@@ -94,6 +171,36 @@ int main()
 }
 
 void Menu()
+{
+    int key;
+
+    do {
+        cout<<endl;
+        cout<<"Chrnsv: LVL 238: Securo Serv - Boss"<<endl;
+        cout<<"1 - Go to Garage (St) "<<endl;
+        cout<<"2 - Go to Office (Q)"<<endl;
+        cout<<"0 - Exit"<<endl;
+
+        cout << "Choose what to do and enter the key " << endl;
+        cin >> key;
+
+        switch (key) {
+            case 1:
+                MenuG();
+                break;
+            case 2:
+                MenuW();
+                break;
+            case 0:
+                cout << "Bye:)" << endl;
+                return;
+            default:
+                cout << "--->Error, try again... " << endl;
+        }
+    } while (key);
+}
+
+void MenuG()
 {
     Cars k;
     Cars find;
@@ -187,134 +294,98 @@ void FindCr(MyStack& S,Cars find){
     while(second.Pop(cr)) S.Push(cr);
 }
 
-/*
-struct consignment {
-    double Price;
-    int Amount;
-    void out();
-};
-
-void consignment::out() {
-    cout << "Price: " << Price << " " << "Amount: " << Amount<<endl;
-}
-
-struct MyQueue
+void MenuW()
 {
-    struct Node
-    {
-        consignment data;
-        Node* next;
-    };
-    Node* First = NULL;
-    int Count = 0;
-    int payment = 0;
-    int full = 0;
-    bool Push(consignment);
-    bool Pop(consignment&);
-    void Info();
-};
-bool MyQueue::Push(consignment data)
-{
-    if (!First)
-    {
-        First = new Node;
-        First->next = NULL;
-        First->data = data;
-        Count = 1;
-    }
-    else
-    {
-        Node* temp;
-        temp = First;
-        while (temp->next != NULL) temp = temp->next;
-        temp->next = new Node;
-        temp->next->data = data;
-        temp->next->next = NULL;
-        Count++;
-    }
-    return true;
-}
-bool MyQueue::Pop(consignment& data)
-{
-    if (!First) return false;
-    Node* temp = First->next;
-    data = First->data;
-    delete First;
-    First = temp;
-    Count--;
-    return true;
-}
-void MyQueue::Info()
-{
-    if (!First) cout << "Queue is empty" << endl;
-    else
-    {
-        cout << endl << "Queue info: " << endl;
-        cout << "\tQueue size = " << Count << endl;
-        First->data.out();
-    }
-}
-
-void menu(MyQueue q);
-
-int main()
-{
-    int n = 10;
-    double db=0;
+    cout<<endl;
+    cout<<"Warehouse Management System"<<endl;
+    cout<<endl;_sleep(500);
+    cout<<"Login:Chrnsv"<<endl;
+    cout<<endl;_sleep(500);
+    cout<<"Password:*******"<<endl;
+    cout<<endl;
+    _sleep(500);
     MyQueue Q;
-    menu(Q);
-    return 0;
-
-}
-
-void menu(MyQueue q) {
-    consignment Ctop;
-    consignment a;
+    warehouse Ctop;
+    warehouse a;
     double pr;
     int k,am;
+    int key;
+
     do {
-        cout << "1.Add new product" << endl;
-        cout << "2.Sell product" << endl;
-        cout << "3.Report" << endl;
-        cout << "0.Exit" << endl;
-        cin >> k;
-        switch (k) {
+        _sleep(500);
+        cout<<"-------Menu-------"<<endl;
+        cout << "1 - Add new product" << endl;
+        cout << "2 - Sell product" << endl;
+        cout << "3 - Report" << endl;
+        cout << "0 - Exit" << endl;
+
+        cout << "Choose what to do and enter the key " << endl;
+        cin >> key;
+
+        switch (key) {
             case 1:
-                cout << "Enter Price: "; cin >> pr;
-                cout << "Enter amount: "; cin >> am;
-                a.Price = pr;
-                a.Amount = am;
-                q.Push(a);
-                q.full+=am;
+                AddPr(Q,a,pr,am);
                 break;
             case 2:
-                cout<<"Enter price: ";cin>>pr;
-                cout<<"Enter amount: ";cin>>am;
-                while(am!=0){
-                    if(am<q.First->data.Amount&&q.First->data.Price<=pr){
-                        q.First->data.Amount-=am;
-                        q.payment += am * (pr - q.First->data.Price);
-                        q.full -= am;
-                        am=0;
-                    }
-                    else{
-                        am-=q.First->data.Amount;
-                        q.payment += q.First->data.Amount * (pr - q.First->data.Price);
-                        q.full -= q.First->data.Amount;
-                        q.First->data.Amount=0;
-                    }
-                    if (q.First->data.Amount==0){
-                        q.Pop(a);
-                    }
-                }
+                Sell(Q,a,pr,am);
                 break;
             case 3:
-                q.Info();
-                cout << "Payment: " << q.payment << endl;
-                cout << "Full: " << q.full << endl;;
+                Q.Info();
+                cout << "Payment: " << Q.payment << endl;
+                cout << "Full: " << Q.full << endl;;
                 break;
-            case 4:
-                break;
+            case 0:
+                cout << "Bye:)" << endl;
+                return;
+            default:
+                cout << "--->Error, try again... " << endl;
         }
-    } while (k != 0);
-}*/
+    } while (key);
+}
+
+void AddPr(MyQueue& q, warehouse& a, double& pr, int& am)
+{
+    cout << "Enter Price: "; cin >> pr;
+    cout << "Enter Amount: "; cin >> am;
+    a.Price = pr;
+    a.Amount = am;
+    q.Push(a);
+    q.full+=am;
+}
+void Sell(MyQueue& q, warehouse& a, double& pr, int& am)
+{
+    cout<<"Enter Price: ";cin>>pr;
+    cout<<"Enter Amount: ";cin>>am;
+    while(am!=0)
+    {
+        if(q.MinPrice>pr)
+        {
+            cout<<"WARNING--Too cheap--WARNING"<<endl;
+            break;
+        }
+        if(am<q.First->data.Amount&&q.First->data.Price<=pr)
+        {
+            q.First->data.Amount-=am;
+            q.payment += am * (pr - q.First->data.Price);
+            q.full -= am;
+            am=0;
+        }
+        if(q.full<am)
+        {
+            cout<<"WARNING--AMOUNT IS TOO BIG--WARNING"<<endl;
+            break;
+        }
+        else
+            {
+            am-=q.First->data.Amount;
+            q.payment += q.First->data.Amount * (pr - q.First->data.Price);
+            q.full -= q.First->data.Amount;
+            q.First->data.Amount=0;
+        }
+        if (q.First->data.Amount==0)
+        {
+            q.Pop(a);
+            q.MinPrice=q.First->data.Price;
+        }
+    }
+}
