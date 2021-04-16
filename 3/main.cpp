@@ -308,7 +308,7 @@ void MenuW()
     warehouse Ctop;
     warehouse a;
     double pr;
-    int k,am;
+    int am;
     int key;
 
     do {
@@ -341,6 +341,7 @@ void MenuW()
                 cout << "--->Error, try again... " << endl;
         }
     } while (key);
+    while (Q.Pop(a));
 }
 
 void AddPr(MyQueue& q, warehouse& a, double& pr, int& am)
@@ -363,17 +364,16 @@ void Sell(MyQueue& q, warehouse& a, double& pr, int& am)
             cout<<"WARNING--Too cheap--WARNING"<<endl;
             break;
         }
+        if(q.full<am) {
+            cout << "WARNING--AMOUNT IS TOO BIG--WARNING" << endl;
+            break;
+        }
         if(am<q.First->data.Amount&&q.First->data.Price<=pr)
         {
             q.First->data.Amount-=am;
             q.payment += am * (pr - q.First->data.Price);
             q.full -= am;
             am=0;
-        }
-        if(q.full<am)
-        {
-            cout<<"WARNING--AMOUNT IS TOO BIG--WARNING"<<endl;
-            break;
         }
         else
             {
