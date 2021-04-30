@@ -96,36 +96,10 @@ void GetDeSeria(char* , int , Bunny& );
 void GetSeria(char*& , int &, Bunny );
 void PrintBinaryFile (char* , int );
 bool InputBinaryFile(MyQueue &);
-void Add (MyQueue& , Bunny& , char*&,int& );
-void Pull(MyQueue& , Bunny&, char*&,int&  );
-void Clearance(MyQueue& , Bunny&, char*&,int&  );
+void Add (MyQueue& , Bunny& );
+void Pull(MyQueue& , Bunny&);
+void Clearance(MyQueue& , Bunny&);
 void Menu();
-/*int main()
-{
-    MyQueue Q;
-    /*Bunny d={"Zayats",2.8,3,false};
-    Bunny d1;
-    d.out();
-    int n;
-    char* data;
-    GetSeria(data,n,d);
-    PrintBinaryFile (data, n);
-    Bunny d2={"Volk",5.6,9,false};
-    GetSeria(data,n,d2);
-    PrintBinaryFile (data, n);
-    Bunny d3={"Gluttony",7.5,3,true};
-    GetSeria(data,n,d3);
-    PrintBinaryFile (data, n);
-    Bunny d4={"Mai",4.2,6,false};
-    GetSeria(data,n,d4);
-    PrintBinaryFile (data, n);
-    //GetDeSeria(data,n,d1);
-    //d1.out();
-    delete[] data;
-    cout<<endl<<"   - - - - - - - - - -    "<<endl;
-    InputBinaryFile();
-    return 0;
-}*/
 int main()
 {
     Menu();
@@ -137,7 +111,7 @@ void Menu()
 {
     MyQueue Q;
     Bunny A;
-    int n;
+    int n=0;
     char* data;
     InputBinaryFile(Q);
     int key;
@@ -155,13 +129,13 @@ void Menu()
 
         switch (key) {
             case 1:
-                Add(Q,A,data,n);
+                Add(Q,A);
                 break;
             case 2:
-                Pull(Q,A,data,n);
+                Pull(Q,A);
                 break;
             case 3:
-                Clearance(Q,A,data,n);
+                Clearance(Q,A);
                 break;
             case 4:
                 Q.Info();
@@ -179,8 +153,10 @@ void Menu()
         delete[] data;
     }
 }
-void Add (MyQueue& Q, Bunny& A, char*& data,int& n)
+void Add (MyQueue& Q, Bunny& A)
 {
+    char* data;
+    int n;
     cout << "Enter information about bunny:" << endl;
     cout << "Name = "; cin >> A.name;
     cout << "Weight = "; cin >> A.weight;
@@ -188,9 +164,12 @@ void Add (MyQueue& Q, Bunny& A, char*& data,int& n)
     cout << "Hungry? - "; cin >> A.hunger;
     GetSeria(data, n, A);
     Q.Push(data, n);
+    delete[] data;
 }
-void Pull(MyQueue& Q, Bunny& A,char*& data,int& n)
+void Pull(MyQueue& Q, Bunny& A)
 {
+    char* data;
+    int n;
     Bunny Ax;
     bool m = false;
     cout << "Enter information about bunny:" << endl;
@@ -208,6 +187,7 @@ void Pull(MyQueue& Q, Bunny& A,char*& data,int& n)
         {
             GetSeria(data, n, A);
             Q.Push(data, n);
+            delete[] data;
         }
         else
         {
@@ -217,8 +197,10 @@ void Pull(MyQueue& Q, Bunny& A,char*& data,int& n)
     }
     if(!m) cout << "Product not found" << endl;
 }
-void Clearance(MyQueue& Q, Bunny& A, char*& data,int& n)
+void Clearance(MyQueue& Q, Bunny& A)
 {
+    char* data;
+    int n;
     while(Q.Count)
     {
         Q.Pop(data, n);
@@ -245,11 +227,11 @@ void GetSeria(char*& data, int &n, Bunny A)
     char* d3 = reinterpret_cast<char*> (&A.weight);
     char* d4 = reinterpret_cast<char*> (&A.age);
     char* d5 = reinterpret_cast<char*> (&A.hunger);
-    for(int i = 0; i <= n1_size; i++) data[i] = d1[i];
-    for(int i = 0; i <= n2; i++) data[i + n1_size] = d2[i];
-    for(int i = 0; i <= n3; i++) data[i + n1_size + n2] = d3[i];
-    for(int i = 0; i <= n4; i++) data[i + n1_size + n2 + n3] = d4[i];
-    for(int i = 0; i <= n5; i++) data[i + n1_size + n2 + n3 + n4] = d5[i];
+    for(int i = 0; i < n1_size; i++) data[i] = d1[i];
+    for(int i = 0; i < n2; i++) data[i + n1_size] = d2[i];
+    for(int i = 0; i < n3; i++) data[i + n1_size + n2] = d3[i];
+    for(int i = 0; i < n4; i++) data[i + n1_size + n2 + n3] = d4[i];
+    for(int i = 0; i < n5; i++) data[i + n1_size + n2 + n3 + n4] = d5[i];
 }
 void GetDeSeria(char* data, int n, Bunny& A)
 {
@@ -293,7 +275,7 @@ bool InputBinaryFile(MyQueue &Q)
             cout << "Weight = " << A.weight<< endl;
             cout << "Age = " << A.age<< endl;
             cout << "Hungry? - " << A.hunger<< endl << endl;
-            GetSeria(data, n, A);
+            //GetSeria(data, n, A);
             Q.Push(data, n);
             delete[] data;
         }
