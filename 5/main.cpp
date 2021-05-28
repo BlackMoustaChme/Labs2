@@ -169,10 +169,11 @@ void DLList::Out()
     }
 
     Node* temp=F;
-    cout<<"List: ";
+    cout<<"List: "<<endl;
     do
     {
-        temp->data.out();//<<" ";
+        temp->data.out();
+        cout<<endl<<" ------------------------- "<<endl;
         temp=temp->next;
     }
     while(temp);
@@ -279,17 +280,19 @@ void DLList::Clear()
     while(Del(k));
 }
 void Menu();
-void read(DLList& ,string );
+void Read(DLList& ,string );
 void Add(DLList& , Phone& );
 void ToTheTop(DLList& , Phone& );
 void ToTheEnd(DLList& , Phone& );
 void ToTheCP(DLList& , Phone& );
+void Delt(DLList& , Phone& );
 void FromTheTop(DLList& , Phone& );
 void FromTheEnd(DLList& , Phone& );
 void FromTheCP(DLList& , Phone& );
-void Delt(DLList& , Phone& );
-void Sort();
-void Updata();
+void Sort(DLList& , Phone& );
+void Bubble (DLList& , Phone& , int );
+bool Compare(DLList& , Phone& , int );
+void Record(DLList& ,string );
 int main()
 {
     cout<<"Liakhim: Yrros, ris, tub siht ebyam eb ton 001% lanigiro"<<endl;
@@ -301,7 +304,7 @@ void Menu()
 {
     DLList MyList;
     Phone k;
-    read(MyList,"Phone.txt");
+    Read(MyList,"Phone.txt");
     int key;
 
     do {
@@ -326,16 +329,18 @@ void Menu()
                 Delt(MyList,k);
                 break;
             case 3:
-                //Sort();
+                Sort(MyList,k);
                 break;
             case 4:
                 MyList.Clear();
                 break;
             case 5:
-                //Updata();
+                Record(MyList, "Phone.txt");
                 break;
             case 6:
                 MyList.Info();
+                cout<<endl;
+                MyList.Out();
                 break;
             case 0:
                 cout << "Bye:)" << endl;
@@ -348,8 +353,6 @@ void Menu()
 
 void Add(DLList& MyList, Phone& k)
 {
-    //DLList MyList;
-    //Phone k;
 
     cout<<"Enter Brand: ";cin>>k.brand;
     cout<<"Enter Color: ";cin>>k.color;
@@ -391,51 +394,6 @@ void Add(DLList& MyList, Phone& k)
     } while (key);
 
 }
-void Delt(DLList& MyList, Phone& k)
-{
-    //DLList MyList;
-    //Phone k;
-    int key;
-
-    do {
-        cout<<endl;
-        cout<<"Where you want to delete the element?"<<endl;
-        cout<<endl<<" ------------------------- "<<endl;
-        cout<<"1 - Top"<<endl;
-        cout<<"2 - Last"<<endl;
-        cout<<"3 - Certain position"<<endl;
-        cout<<"0 - Exit"<<endl;
-        cout<<endl<<" ------------------------- "<<endl;
-        cout << "Choose what to do and enter the key " << endl;
-        cin >> key;
-
-        switch (key) {
-            case 1:
-                FromTheTop(MyList,k);
-                break;
-            case 2:
-                FromTheEnd(MyList,k);
-                break;
-            case 3:
-                FromTheCP(MyList,k);
-                break;
-            case 0:
-                cout << "Bye:)" << endl;
-                return;
-            default:
-                cout << "--->Error, try again... " << endl;
-        }
-    } while (key);
-
-}
-/*void Sort()
-{
-
-}
-void Updata()
-{
-
-}*/
 void ToTheTop(DLList& MyList, Phone& k)
 {
     if(MyList.Count != 0)
@@ -477,6 +435,42 @@ void ToTheCP(DLList& MyList, Phone& k)
             MyList.AddNext(k);
         }
     }
+}
+void Delt(DLList& MyList, Phone& k)
+{
+
+    int key;
+
+    do {
+        cout<<endl;
+        cout<<"Where you want to delete the element?"<<endl;
+        cout<<endl<<" ------------------------- "<<endl;
+        cout<<"1 - Top"<<endl;
+        cout<<"2 - Last"<<endl;
+        cout<<"3 - Certain position"<<endl;
+        cout<<"0 - Exit"<<endl;
+        cout<<endl<<" ------------------------- "<<endl;
+        cout << "Choose what to do and enter the key " << endl;
+        cin >> key;
+
+        switch (key) {
+            case 1:
+                FromTheTop(MyList,k);
+                break;
+            case 2:
+                FromTheEnd(MyList,k);
+                break;
+            case 3:
+                FromTheCP(MyList,k);
+                break;
+            case 0:
+                cout << "Bye:)" << endl;
+                return;
+            default:
+                cout << "--->Error, try again... " << endl;
+        }
+    } while (key);
+
 }
 void FromTheTop(DLList& MyList, Phone& k)
 {
@@ -527,69 +521,105 @@ void FromTheCP(DLList& MyList, Phone& k)
         }
     }
 }
-/*void writeFile()
+void Sort(DLList& MyList, Phone& k)
+{
+    int key;
+
+    do {
+        cout<<endl;
+        cout<<"By What you want to sort?"<<endl;
+        cout<<endl<<" ------------------------- "<<endl;
+        cout<<"1 - By Price"<<endl;
+        cout<<"2 - By eDRAM (Gb)"<<endl;
+        cout<<"3 - By Screen diagonal"<<endl;
+        cout<<"4 - By Release date (Year)"<<endl;
+        cout<<"0 - Exit"<<endl;
+        cout<<endl<<" ------------------------- "<<endl;
+        cout << "Choose what to do and enter the key " << endl;
+        cin >> key;
+
+        switch (key) {
+            case 1:
+                Bubble(MyList,k,key);
+                break;
+            case 2:
+                Bubble(MyList,k,key);
+                break;
+            case 3:
+                Bubble(MyList,k,key);
+                break;
+            case 4:
+                Bubble(MyList,k,key);
+                break;
+            case 0:
+                cout << "Bye:)" << endl;
+                return;
+            default:
+                cout << "--->Error, try again... " << endl;
+        }
+    } while (key);
+}
+bool Compare(DLList& MyList, Phone& k,int key)
+{
+    switch (key) {
+        case 1:
+            if (MyList.C->data.Price > MyList.C->prev->data.Price) return true;
+            break;
+        case 2:
+            if (MyList.C->data.eDRAM > MyList.C->prev->data.eDRAM) return true;
+            break;
+        case 3:
+            if (MyList.C->data.scrdl > MyList.C->prev->data.scrdl) return true;
+            break;
+        case 4:
+            if (MyList.C->data.ReleaseDate > MyList.C->prev->data.ReleaseDate) return true;
+            break;
+    }
+    return false;
+}
+void Bubble (DLList& MyList, Phone& k, int key)
+{
+    Phone t;
+    for (int i=0;i<MyList.Count-1;i++)
+    {
+        MyList.MoveLast();
+        for (int j = MyList.Count - 2; j >= i; j--)
+        {
+            if (Compare(MyList,k,key)) {
+                t = MyList.C->data;
+                MyList.C->data = MyList.C->prev->data;
+                MyList.C->prev->data = t;
+            }
+            MyList.MovePrev();
+        }
+    }
+}
+void Record(DLList& MyList,string FileName)
 {
     if(MyList.Count == 0)
     {
-        cout << "Warning! The list is empty." << endl;
+        cout << "Warning! The list is empty" << endl;
     }
-    system("clear");
-    std::ofstream out("bunnyOut");
-    S.MoveFirst();
-    for(int i{}; i < S.Count; i++)
+    ofstream F(FileName.c_str());
+    MyList.MoveFirst();
+    for(int i=0; i < MyList.Count; i++)
     {
-        Bunny outData = S.current->data;
-        out << outData.name << " " << outData.age << " " << outData.weight << " " << outData.isHungry << endl;
-        S.moveNext();
+        Phone k = MyList.C->data;
+        F<<k.brand<<" "<<k.color<<" "<<k.scrdl<<" "<<k.eDRAM<<" "<<k.ReleaseDate<<" "<<k.Price<<endl;
+        MyList.MoveNext();
     }
-    out.close();
-}*/
-void read(DLList& MyList,string FileName)
+    F.close();
+}
+void Read(DLList& MyList,string FileName)
 {
     ifstream F(FileName.c_str());
     if (!F){ cout<<"Error";
         return;
     }
     Phone k;
-    while(F>>k.brand>>k.color>>k.scrdl>>k.eDRAM>>k.ReleaseDate>>k.Price) MyList.AddNext(k);
+    while(F>>k.brand>>k.color>>k.scrdl>>k.eDRAM>>k.ReleaseDate>>k.Price)
+    {
+        MyList.AddNext(k);
+    }
     F.close();
 }
-/*void Bubble (int n)
-{
-    double c;
-    for (int i=0;i<n-1;i++) {
-        for (int j = n - 2; j >= i; j--)
-            if (A[j] > A[j + 1]) {
-                c=A[j];
-                A[j]=A[j+1];
-                A[j+1]=c;
-            }
-    }
-}*/
-/*void Shell (int n)
-{
-    long long int i,j,k,s;
-    double x;
-    for (k=steps(n);k>=0;k--)
-    {
-        s=S[k];
-        for(i=s;i<n;i++)
-        {
-            x=A[i];
-            for(j=i-s; (j>=0) && (x<A[j]);j=j-s) A[j+s]=A[j];
-            A[j+s]=x;
-        }
-    }
-}
-int steps (int N)
-{
-    int i=-1;
-    do
-    {
-        i++;
-        if(i%2==0){S[i]=9*pow(2,i)-9*pow(2,i/2)+1;}
-        else S[i]=8*pow(2,i)-6*pow(2,(i+1)/2)+1;
-    }
-    while (3*S[i]<N);
-    return i-1;
-}*/
