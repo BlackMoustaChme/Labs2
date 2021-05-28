@@ -12,14 +12,12 @@ struct Phone{
     string brand;
     double scrdl;
     void out();
-    //bool IsEqual(Cars);
 };
 
 struct DLList
 {
     struct Node
     {
-        //void* data=(Phone) data
         Phone data;
         Node *next;
         Node *prev;
@@ -49,7 +47,6 @@ struct DLList
     bool DelFirst(Phone&);
     bool DelLast(Phone&);
 
-    //void deletion(Cars&);
 };
 void Phone::out(){
     cout<<" Brand: "<<brand<<endl;
