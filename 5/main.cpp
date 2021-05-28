@@ -425,7 +425,7 @@ void ToTheCP(DLList& MyList, Phone& k)
         }
         else{
             MyList.MoveFirst();
-            for(int i{1}; i < cp-1; i++)
+            for(int i=1; i < cp-1; i++)
             {
                 MyList.C =MyList.C->next;
             }
@@ -510,7 +510,7 @@ void FromTheCP(DLList& MyList, Phone& k)
         }
         else{
             MyList.MoveFirst();
-            for(int i{1}; i <cp+1; i++)
+            for(int i=1; i <cp+1; i++)
             {
                 MyList.C =MyList.C->next;
             }
