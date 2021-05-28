@@ -279,12 +279,20 @@ void DLList::Clear()
     while(Del(k));
 }
 void Menu();
-void Add();
-void Delt();
+void read(DLList& ,string );
+void Add(DLList& , Phone& );
+void ToTheTop(DLList& , Phone& );
+void ToTheEnd(DLList& , Phone& );
+void ToTheCP(DLList& , Phone& );
+void FromTheTop(DLList& , Phone& );
+void FromTheEnd(DLList& , Phone& );
+void FromTheCP(DLList& , Phone& );
+void Delt(DLList& , Phone& );
 void Sort();
 void Updata();
 int main()
 {
+    cout<<"Liakhim: Yrros, ris, tub siht ebyam eb ton 001% lanigiro"<<endl;
     Menu();
     return 0;
 
@@ -292,11 +300,12 @@ int main()
 void Menu()
 {
     DLList MyList;
+    Phone k;
+    read(MyList,"Phone.txt");
     int key;
 
     do {
         cout<<endl;
-        cout<<"Liakhim: Yrros, ris, tub siht ebyam eb ton 001% lanigiro"<<endl;
         cout<<endl<<" ------------------------- "<<endl;
         cout<<"1 - Add element "<<endl;
         cout<<"2 - Delete element"<<endl;
@@ -311,19 +320,19 @@ void Menu()
 
         switch (key) {
             case 1:
-                Add();
+                Add(MyList,k);
                 break;
             case 2:
-                Delt();
+                Delt(MyList,k);
                 break;
             case 3:
-                Sort();
+                //Sort();
                 break;
             case 4:
                 MyList.Clear();
                 break;
             case 5:
-                Updata();
+                //Updata();
                 break;
             case 6:
                 MyList.Info();
@@ -337,10 +346,10 @@ void Menu()
     } while (key);
 }
 
-void Add()
+void Add(DLList& MyList, Phone& k)
 {
-    DLList MyList;
-    Phone k;
+    //DLList MyList;
+    //Phone k;
 
     cout<<"Enter Brand: ";cin>>k.brand;
     cout<<"Enter Color: ";cin>>k.color;
@@ -348,156 +357,206 @@ void Add()
     cout<<"Enter eDRAM (Gb): ";cin>>k.eDRAM;
     cout<<"Enter Release date (Year): ";cin>>k.ReleaseDate;
     cout<<"Enter Price: ";cin>>k.Price;
-    cout<<"Enter Release date (Year): ";cin>>k.ReleaseDate;
+
+    int key;
+
+    do {
+        cout<<endl;
+        cout<<"Where you want to add the element?"<<endl;
+        cout<<endl<<" ------------------------- "<<endl;
+        cout<<"1 - Top"<<endl;
+        cout<<"2 - Last"<<endl;
+        cout<<"3 - Certain position"<<endl;
+        cout<<"0 - Exit"<<endl;
+        cout<<endl<<" ------------------------- "<<endl;
+        cout << "Choose what to do and enter the key " << endl;
+        cin >> key;
+
+        switch (key) {
+            case 1:
+                ToTheTop(MyList,k);
+                break;
+            case 2:
+                ToTheEnd(MyList,k);
+                break;
+            case 3:
+                ToTheCP(MyList,k);
+                break;
+            case 0:
+                cout << "Bye:)" << endl;
+                return;
+            default:
+                cout << "--->Error, try again... " << endl;
+        }
+    } while (key);
 
 }
-void Delt()
+void Delt(DLList& MyList, Phone& k)
 {
+    //DLList MyList;
+    //Phone k;
+    int key;
+
+    do {
+        cout<<endl;
+        cout<<"Where you want to delete the element?"<<endl;
+        cout<<endl<<" ------------------------- "<<endl;
+        cout<<"1 - Top"<<endl;
+        cout<<"2 - Last"<<endl;
+        cout<<"3 - Certain position"<<endl;
+        cout<<"0 - Exit"<<endl;
+        cout<<endl<<" ------------------------- "<<endl;
+        cout << "Choose what to do and enter the key " << endl;
+        cin >> key;
+
+        switch (key) {
+            case 1:
+                FromTheTop(MyList,k);
+                break;
+            case 2:
+                FromTheEnd(MyList,k);
+                break;
+            case 3:
+                FromTheCP(MyList,k);
+                break;
+            case 0:
+                cout << "Bye:)" << endl;
+                return;
+            default:
+                cout << "--->Error, try again... " << endl;
+        }
+    } while (key);
 
 }
-void Sort()
+/*void Sort()
 {
 
 }
 void Updata()
 {
 
-}
-/*void addToTheTop()
+}*/
+void ToTheTop(DLList& MyList, Phone& k)
 {
-    if(S.count != 0)
+    if(MyList.Count != 0)
     {
-        getData(data);
-        S.addFirst(data);
+        MyList.AddFirst(k);
     }
     else
     {
-        getData(data);
-        S.init(data);
+        MyList.Init(k);
     }
-
 }
-
-void addToTheEnd()
+void ToTheEnd(DLList& MyList, Phone& k)
 {
-    getData(data);
-    S.addLast(data);
+    MyList.AddLast(k);
 }
-
-void addToTheK()
+void ToTheCP(DLList& MyList, Phone& k)
 {
-    cout << "Count " << S.count << endl;
-
-    int k = 0;
-    while (k <= 0 || k > S.count)
+    cout << "Count " <<MyList.Count << endl;
+    int cp= 0;
+    while (cp <= 0 || cp>MyList.Count)
     {
-        cout << "k = "; cin >> k; cout << endl;
+        cout << "CP = "; cin >>cp; cout << endl;
     }
-    getData(data);
-    if(k == 1)
+    if(cp == 1)
     {
-        S.addFirst(data);
+        MyList.AddFirst(k);
     }
     else
     {
-        if(k == S.count){
-            S.addLast(data);
+        if(cp ==MyList.Count){
+            MyList.AddLast(k);
         }
         else{
-            S.moveFirst();
-            for(int i{1}; i < k-1; i++)
+            MyList.MoveFirst();
+            for(int i{1}; i < cp-1; i++)
             {
-                S.current = S.current->next;
+                MyList.C =MyList.C->next;
             }
-            S.addNext(data);
+            MyList.AddNext(k);
         }
     }
 }
-
-void removeFromTheTop()
+void FromTheTop(DLList& MyList, Phone& k)
 {
-    if(S.count != 0)
+    if(MyList.Count != 0)
     {
-        S.delFirst(data);
+        MyList.DelFirst(k);
     }
     else
     {
         cout << "Error! The list is empty." << endl;
     }
 }
-
-void removeFromTheEnd()
+void FromTheEnd(DLList& MyList, Phone& k)
 {
-    if(S.count != 0)
+    if(MyList.Count != 0)
     {
-        S.delLast(data);
+        MyList.DelLast(k);
     }
     else
     {
         cout << "Error! The list is empty." << endl;
     }
 }
-
-void removeFromTheK()
+void FromTheCP(DLList& MyList, Phone& k)
 {
-    cout << "Count " << S.count << endl;
-
-    int k = 0;
-    while (k <= 0 || k > S.count)
+    cout << "Count " <<MyList.Count << endl;
+    int cp= 0;
+    while (cp <= 0 || cp>MyList.Count)
     {
-        cout << "k = "; cin >> k; cout << endl;
+        cout << "CP = "; cin >>cp; cout << endl;
     }
-
-    if(k == 1)
+    if(cp == 1)
     {
-        S.delFirst(data);
+        MyList.DelFirst(k);
     }
     else
     {
-        if(k == S.count){
-            S.delLast(data);
+        if(cp ==MyList.Count){
+            MyList.DelLast(k);
         }
         else{
-            S.moveFirst();
-            for(int i{1}; i < k+1; i++)
+            MyList.MoveFirst();
+            for(int i{1}; i <cp+1; i++)
             {
-                S.current = S.current->next;
+                MyList.C =MyList.C->next;
             }
-            S.delPrev(data);
+            MyList.DelPrev(k);
         }
     }
 }
-
-void writeFile()
+/*void writeFile()
 {
-    if(S.count == 0)
+    if(MyList.Count == 0)
     {
         cout << "Warning! The list is empty." << endl;
     }
     system("clear");
     std::ofstream out("bunnyOut");
-    S.moveFirst();
-    for(int i{}; i < S.count; i++)
+    S.MoveFirst();
+    for(int i{}; i < S.Count; i++)
     {
         Bunny outData = S.current->data;
         out << outData.name << " " << outData.age << " " << outData.weight << " " << outData.isHungry << endl;
         S.moveNext();
     }
     out.close();
-}/*
-/*void read(MyStack& S,string FileName){
-    ifstream F(FileName);
+}*/
+void read(DLList& MyList,string FileName)
+{
+    ifstream F(FileName.c_str());
     if (!F){ cout<<"Error";
         return;
     }
-    Cars cr;
-    while(F>>cr.brand>>cr.ToWD>>cr.HP>>cr.Seats>>cr.color>>cr.Price>>cr.ReleaseDate) S.Push(cr);
+    Phone k;
+    while(F>>k.brand>>k.color>>k.scrdl>>k.eDRAM>>k.ReleaseDate>>k.Price) MyList.AddNext(k);
     F.close();
-}*/
+}
 /*void Bubble (int n)
 {
     double c;
-
     for (int i=0;i<n-1;i++) {
         for (int j = n - 2; j >= i; j--)
             if (A[j] > A[j + 1]) {
@@ -511,7 +570,6 @@ void writeFile()
 {
     long long int i,j,k,s;
     double x;
-
     for (k=steps(n);k>=0;k--)
     {
         s=S[k];
@@ -535,4 +593,3 @@ int steps (int N)
     while (3*S[i]<N);
     return i-1;
 }*/
-
