@@ -50,13 +50,168 @@ struct Datetime
 
 };
 void Date::out(){
-    cout<<" < ";
+    cout<<" <Previous date>        <Current date>         <Next date>"<<endl;
+    if (month == 1 && day == 1)
+    {
+        cout<<" <";
+        cout<<hour<<":";
+        cout<<minute<<":";
+        cout<<second<<"  ";
+        cout<<"31"<<"/";
+        cout<<"12"<<"/";
+        cout<<year-1<<"> ";
+    }
+    if (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0))
+    {
+        if (((day <= 31 && day > 1) && (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12)) || ((day <= 30 && day > 1) && (month == 4 || month == 6 || month == 9 || month == 11)) || ((day <= 29 && day > 1) && month == 2) )
+        {
+            cout<<" <";
+            cout<<hour<<":";
+            cout<<minute<<":";
+            cout<<second<<"  ";
+            cout<<day-1<<"/";
+            cout<<month<<"/";
+            cout<<year<<"> ";
+        }
+        if (day == 1 && (month == 2 || month == 4 || month == 6 || month == 8 || month == 9 || month == 11) )
+        {
+            cout<<" <";
+            cout<<hour<<":";
+            cout<<minute<<":";
+            cout<<second<<"  ";
+            cout<<"31"<<"/";
+            cout<<month-1<<"/";
+            cout<<year<<"> ";
+        }
+        if (day == 1 && (month == 5 || month == 7 || month == 10 || month == 12  ) )
+        {
+            cout<<" <";
+            cout<<hour<<":";
+            cout<<minute<<":";
+            cout<<second<<"  ";
+            cout<<"30"<<"/";
+            cout<<month-1<<"/";
+            cout<<year<<"> ";
+        }
+        if (day == 1 && month == 3  )
+        {
+            cout<<" <";
+            cout<<hour<<":";
+            cout<<minute<<":";
+            cout<<second<<"  ";
+            cout<<"29"<<"/";
+            cout<<month-1<<"/";
+            cout<<year<<"> ";
+        }
+    }
+    else
+    {
+        if (((day <= 31 && day > 1) && (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12)) || ((day <= 30 && day > 1) && (month == 4 || month == 6 || month == 9 || month == 11)) || ((day <= 28 && day > 1) && month == 2) )
+        {
+            cout<<" <";
+            cout<<hour<<":";
+            cout<<minute<<":";
+            cout<<second<<"  ";
+            cout<<day-1<<"/";
+            cout<<month<<"/";
+            cout<<year<<"> ";
+        }
+        if (day == 1 && (month == 2 || month == 4 || month == 6 || month == 8 || month == 9 || month == 11) )
+        {
+            cout<<" <";
+            cout<<hour<<":";
+            cout<<minute<<":";
+            cout<<second<<"  ";
+            cout<<"31"<<"/";
+            cout<<month-1<<"/";
+            cout<<year<<"> ";
+        }
+        if (day == 1 && (month == 5 || month == 7 || month == 10 || month == 12  ) )
+        {
+            cout<<" <";
+            cout<<hour<<":";
+            cout<<minute<<":";
+            cout<<second<<"  ";
+            cout<<"30"<<"/";
+            cout<<month-1<<"/";
+            cout<<year<<"> ";
+        }
+        if (day == 1 && month == 3  )
+        {
+            cout<<" <";
+            cout<<hour<<":";
+            cout<<minute<<":";
+            cout<<second<<"  ";
+            cout<<"28"<<"/";
+            cout<<month-1<<"/";
+            cout<<year<<"> ";
+        }
+    }
+
+    cout<<" <";
     cout<<hour<<":";
     cout<<minute<<":";
     cout<<second<<"  ";
     cout<<day<<"/";
     cout<<month<<"/";
-    cout<<year<<" > ";
+    cout<<year<<"> ";
+
+    if (month == 12 && day == 31)
+    {
+        cout<<" <";
+        cout<<hour<<":";
+        cout<<minute<<":";
+        cout<<second<<"  ";
+        cout<<"1"<<"/";
+        cout<<"1"<<"/";
+        cout<<year+1<<"> ";
+    }
+    if (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0))
+    {
+        if ((day < 31 && (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12)) || (day < 30 && (month == 4 || month == 6 || month == 9 || month == 11 )) || (day < 29 && month == 2) )
+        {
+            cout<<" <";
+            cout<<hour<<":";
+            cout<<minute<<":";
+            cout<<second<<"  ";
+            cout<<day+1<<"/";
+            cout<<month<<"/";
+            cout<<year<<"> ";
+        }
+        if ((day == 31 && (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10)) || (day == 30 && (month == 4 || month == 6 || month == 9 || month == 11 )) || (day == 29 && month == 2) )
+        {
+            cout<<" <";
+            cout<<hour<<":";
+            cout<<minute<<":";
+            cout<<second<<"  ";
+            cout<<"1"<<"/";
+            cout<<month+1<<"/";
+            cout<<year<<"> ";
+        }
+    }
+    else
+    {
+        if ((day < 31 && (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12 )) || (day < 30 && (month == 4 || month == 6 || month == 9 || month == 11 )) || (day < 28 && month == 2) )
+        {
+            cout<<" <";
+            cout<<hour<<":";
+            cout<<minute<<":";
+            cout<<second<<"  ";
+            cout<<day+1<<"/";
+            cout<<month<<"/";
+            cout<<year<<"> ";
+        }
+        if ((day == 31 && (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10)) || (day == 30 && (month == 4 || month == 6 || month == 9 || month == 11)) || (day == 28 && month == 2) )
+        {
+            cout<<" <";
+            cout<<hour<<":";
+            cout<<minute<<":";
+            cout<<second<<"  ";
+            cout<<"1"<<"/";
+            cout<<month+1<<"/";
+            cout<<year<<"> ";
+        }
+    }
 }
 
 bool Datetime::MoveNext()
@@ -187,11 +342,11 @@ void Datetime::Info()
         cout << "List is empty" << endl;
     if(C)
     {
-        cout << "Current node data = " ; C->data.out();
+        cout << "Current node data = "<<endl ; C->data.out();
     }
     else if (MoveFirst())
     {
-        cout << "Current node data = " ; C->data.out();
+        cout << "Current node data = "<<endl ; C->data.out();
     }
 
 }
@@ -281,14 +436,10 @@ void Datetime::Clear()
 
 void Menu();
 void Read(Datetime& ,string );
-void Sort(Datetime& , Date& );
-void Sort2(Datetime& , Date& );
-void Bubble (Datetime& , Date& , int );
-bool Compare(Datetime& , Date& , int );
-//void Record(DLList& ,string );
+void Task_Var14(Datetime& , Date& );
+
 int main()
 {
-    //cout<<"Liakhim: Yrros, ris, tub siht ebyam eb ton 001% lanigiro"<<endl;
     Menu();
     return 0;
 
@@ -303,12 +454,9 @@ void Menu()
     do {
         cout<<endl;
         cout<<endl<<" ------------------------- "<<endl;
-        cout<<"1 - Add element "<<endl;
-        cout<<"2 - Delete element"<<endl;
-        cout<<"3 - Sort"<<endl;
-        cout<<"4 - Clear List"<<endl;
-        cout<<"5 - Sort2"<<endl;
-        cout<<"6 - Info"<<endl;
+        cout<<"1 - Info (List of Dates) "<<endl;
+        cout<<"2 - Sort2"<<endl;
+        cout<<"3 - Clear List"<<endl;
         cout<<"0 - Exit"<<endl;
         cout<<endl<<" ------------------------- "<<endl;
         cout << "Choose what to do and enter the key " << endl;
@@ -316,71 +464,15 @@ void Menu()
 
         switch (key) {
             case 1:
-                //Add(MyList,k);
-                break;
-            case 2:
-                //Delt(MyList,k);
-                break;
-            case 3:
-                Sort(MyList,k);
-                break;
-            case 4:
-                MyList.Clear();
-                break;
-            case 5:
-                Sort2(MyList,k);
-                break;
-            case 6:
                 MyList.Info();
                 cout<<endl;
                 MyList.Out();
                 break;
-            case 0:
-                cout << "Bye:)" << endl;
-                return;
-            default:
-                cout << "--->Error, try again... " << endl;
-        }
-    } while (key);
-}
-
-void Sort(Datetime& MyList, Date& k)
-{
-    int key;
-
-    do {
-        cout<<endl;
-        cout<<"By What you want to sort?"<<endl;
-        cout<<endl<<" ------------------------- "<<endl;
-        cout<<"1 - By Hour"<<endl;
-        cout<<"2 - By Minute"<<endl;
-        cout<<"3 - By Second"<<endl;
-        cout<<"4 - By Day"<<endl;
-        cout<<"5 - By Month"<<endl;
-        cout<<"6 - By Year"<<endl;
-        cout<<"0 - Exit"<<endl;
-        cout<<endl<<" ------------------------- "<<endl;
-        cout << "Choose what to do and enter the key " << endl;
-        cin >> key;
-
-        switch (key) {
-            case 1:
-                Bubble(MyList,k,key);
-                break;
             case 2:
-                Bubble(MyList,k,key);
+                Task_Var14(MyList,k);
                 break;
             case 3:
-                Bubble(MyList,k,key);
-                break;
-            case 4:
-                Bubble(MyList,k,key);
-                break;
-            case 5:
-                Bubble(MyList,k,key);
-                break;
-            case 6:
-                Bubble(MyList,k,key);
+                MyList.Clear();
                 break;
             case 0:
                 cout << "Bye:)" << endl;
@@ -390,48 +482,7 @@ void Sort(Datetime& MyList, Date& k)
         }
     } while (key);
 }
-bool Compare(Datetime& MyList, Date& k,int key)
-{
-    switch (key) {
-        case 1:
-            if (MyList.C->data.hour > MyList.C->prev->data.hour) return true;
-            break;
-        case 2:
-            if (MyList.C->data.minute > MyList.C->prev->data.minute) return true;
-            break;
-        case 3:
-            if (MyList.C->data.second > MyList.C->prev->data.second) return true;
-            break;
-        case 4:
-            if (MyList.C->data.day > MyList.C->prev->data.day) return true;
-            break;
-        case 5:
-            if (MyList.C->data.month > MyList.C->prev->data.month) return true;
-            break;
-        case 6:
-            if (MyList.C->data.year > MyList.C->prev->data.year) return true;
-            break;
-    }
-    return false;
-}
-void Bubble (Datetime& MyList, Date& k, int key)
-{
-    Date t;
-    for (int i=0;i<MyList.Count-1;i++)
-    {
-        MyList.MoveLast();
-        for (int j = MyList.Count - 2; j >= i; j--)
-        {
-            if (Compare(MyList,k,key)) {
-                t = MyList.C->data;
-                MyList.C->data = MyList.C->prev->data;
-                MyList.C->prev->data = t;
-            }
-            MyList.MovePrev();
-        }
-    }
-}
-void Sort2 (Datetime& MyList, Date& k)
+void Task_Var14 (Datetime& MyList, Date& k)
 {
     Date t;
     bool b=true;
@@ -454,13 +505,15 @@ void Sort2 (Datetime& MyList, Date& k)
                     break;
                 }
             }
+            cout<<endl<<" ------------------------- "<<endl;
             MyList.C->data.out();
+            cout<<endl<<" ------------------------- "<<endl;
             break;
         }
         MyList.MoveNext();
+
     }
 }
-
 void Read(Datetime& MyList,string FileName)
 {
     ifstream F(FileName.c_str());
@@ -472,9 +525,19 @@ void Read(Datetime& MyList,string FileName)
     {
         if (k.hour>-1 && k.hour<=24 && k.minute>-1 && k.minute<60 && k.second>-1 && k.second<60 && k.day>0 && k.day<32 && k.month>0 && k.month<13)//checking dates
             if (((k.year % 4 == 0) && (k.year % 100 != 0)) || (k.year % 400 == 0))
-        {
-            MyList.AddNext(k);
-        }
+            {
+                if ((k.day < 32 && (k.month == 1 || k.month == 3 || k.month == 5 || k.month == 7 || k.month == 8 || k.month == 10 || k.month == 12)) || (k.day < 31 && (k.month == 4 || k.month == 6 || k.month == 9 || k.month == 11)) || (k.day < 30 && k.month == 2) )
+                {
+                    MyList.AddNext(k);
+                }
+            }
+            else
+            {
+                if((k.day < 32 && (k.month == 1 || k.month == 3 || k.month == 5 || k.month == 7 || k.month == 8 || k.month == 10 || k.month == 12)) || (k.day < 31 && (k.month == 4 || k.month == 6 || k.month == 9 || k.month == 11)) || (k.day < 29 && k.month == 2) )
+                {
+                    MyList.AddNext(k);
+                }
+            }
     }
     F.close();
 }
