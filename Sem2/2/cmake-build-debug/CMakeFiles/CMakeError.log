@@ -1,0 +1,19 @@
+Detecting CXX compiler ABI info failed to compile with the following output:
+Change Dir: F:/Chernousov/labs2/Sem2/2/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):nmake /nologo cmTC_29d68\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\bin\HostX86\x86\nmake.exe"  -f CMakeFiles\cmTC_29d68.dir\build.make /nologo -L                  CMakeFiles\cmTC_29d68.dir\build
+Building CXX object CMakeFiles/cmTC_29d68.dir/CMakeCXXCompilerABI.cpp.obj
+	C:\PROGRA~2\MIB055~1\2017\COMMUN~1\VC\Tools\MSVC\1411~1.255\bin\HostX86\x86\cl.exe @C:\Users\chme\AppData\Local\Temp\nm790B.tmp
+CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_29d68.exe
+	"C:\Program Files\JetBrains\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_29d68.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100162~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100162~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MIB055~1\2017\COMMUN~1\VC\Tools\MSVC\1411~1.255\bin\HostX86\x86\link.exe /nologo @CMakeFiles\cmTC_29d68.dir\objects1.rsp @C:\Users\chme\AppData\Local\Temp\nm79E7.tmp
+FINAL LINK: command "C:\PROGRA~2\MIB055~1\2017\COMMUN~1\VC\Tools\MSVC\1411~1.255\bin\HostX86\x86\link.exe /nologo @CMakeFiles\cmTC_29d68.dir\objects1.rsp /out:cmTC_29d68.exe /implib:cmTC_29d68.lib /pdb:F:\Chernousov\labs2\Sem2\2\cmake-build-debug\CMakeFiles\CMakeTmp\cmTC_29d68.pdb /version:0.0 /machine:X86 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\cmTC_29d68.dir/intermediate.manifest CMakeFiles\cmTC_29d68.dir/manifest.res" failed (exit code 1104) with the following output:
+LINK : fatal error LNK1104: эх єфрхЄё  юЄъЁ√Є№ Їрщы "cmTC_29d68.exe"
+NMAKE : fatal error U1077: "C:\Program Files\JetBrains\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" : тючтЁр∙хээ√щ ъюф "0xffffffff"
+Stop.
+NMAKE : fatal error U1077: "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\bin\HostX86\x86\nmake.exe" : тючтЁр∙хээ√щ ъюф "0x2"
+Stop.
+
+
+
+

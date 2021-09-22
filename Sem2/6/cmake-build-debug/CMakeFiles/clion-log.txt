@@ -1,4 +1,4 @@
-"C:\Program Files\JetBrains\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - NMake Makefiles" F:\Chernousov\labs2\6
+"C:\Program Files\JetBrains\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - NMake Makefiles" F:\Chernousov\labs2\Sem2\6
 -- The C compiler identification is MSVC 19.11.25547.0
 -- The CXX compiler identification is MSVC 19.11.25547.0
 -- Check for working C compiler: C:/Program Files (x86)/Microsoft Visual Studio/2017/Community/VC/Tools/MSVC/14.11.25503/bin/HostX86/x86/cl.exe
@@ -15,4 +15,4 @@
 -- Detecting CXX compile features - done
 -- Configuring done
 -- Generating done
--- Build files have been written to: F:/Chernousov/labs2/6/cmake-build-debug
+-- Build files have been written to: F:/Chernousov/labs2/Sem2/6/cmake-build-debug
