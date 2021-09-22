@@ -1,11 +1,7 @@
 #include <iostream>
-#define _USE_MATH_DEFINES
 #include <cmath>
-#include <math.h>
 #include <ctime>
 #include <fstream>
-#include <algorithm>
-#include <iomanip>
 
 struct MyQueue
 {
@@ -18,8 +14,8 @@ struct MyQueue
     int payment = 0;
     int MinPrice = 0;
     int full = 0;
-    bool Push(warehouse);
-    bool Pop(warehouse&);
+    bool Push();
+    bool Pop(&);
     void Info();
 };
 bool MyQueue::Push(warehouse data)

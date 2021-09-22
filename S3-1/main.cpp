@@ -455,7 +455,7 @@ void Menu()
         cout<<endl;
         cout<<endl<<" ------------------------- "<<endl;
         cout<<"1 - Info (List of Dates) "<<endl;
-        cout<<"2 - Sort2"<<endl;
+        cout<<"2 - Task_Var14"<<endl;
         cout<<"3 - Clear List"<<endl;
         cout<<"0 - Exit"<<endl;
         cout<<endl<<" ------------------------- "<<endl;
