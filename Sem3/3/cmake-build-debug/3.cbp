@@ -82,6 +82,36 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="F:/Chernousov/labs2/Sem3/3/App.cpp">
+			<Option target="3"/>
+		</Unit>
+		<Unit filename="F:/Chernousov/labs2/Sem3/3/App.h">
+			<Option target="3"/>
+		</Unit>
+		<Unit filename="F:/Chernousov/labs2/Sem3/3/DLList.cpp">
+			<Option target="3"/>
+		</Unit>
+		<Unit filename="F:/Chernousov/labs2/Sem3/3/DLList.h">
+			<Option target="3"/>
+		</Unit>
+		<Unit filename="F:/Chernousov/labs2/Sem3/3/DataObtaining.cpp">
+			<Option target="3"/>
+		</Unit>
+		<Unit filename="F:/Chernousov/labs2/Sem3/3/DataObtaining.h">
+			<Option target="3"/>
+		</Unit>
+		<Unit filename="F:/Chernousov/labs2/Sem3/3/Datetime.cpp">
+			<Option target="3"/>
+		</Unit>
+		<Unit filename="F:/Chernousov/labs2/Sem3/3/Datetime.h">
+			<Option target="3"/>
+		</Unit>
+		<Unit filename="F:/Chernousov/labs2/Sem3/3/UI.cpp">
+			<Option target="3"/>
+		</Unit>
+		<Unit filename="F:/Chernousov/labs2/Sem3/3/UI.h">
+			<Option target="3"/>
+		</Unit>
 		<Unit filename="F:/Chernousov/labs2/Sem3/3/main.cpp">
 			<Option target="3"/>
 		</Unit>
