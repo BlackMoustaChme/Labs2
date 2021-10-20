@@ -18,7 +18,10 @@ double Triangle::CalcSquare()
     return
             sqrt((((CalcPerimeter()/2)*((CalcPerimeter()/2)-a)*(CalcPerimeter()/2)-a)*(CalcPerimeter()/2)-a));
 }
-
+Circle::Circle(double r1)
+{
+    r=r1;
+}
 double Circle::CalcPerimeter()
 {
     return

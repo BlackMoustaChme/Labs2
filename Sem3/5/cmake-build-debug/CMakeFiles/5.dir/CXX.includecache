@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+F:/Chernousov/labs2/Sem3/5/Figure.h
+
+F:/Chernousov/labs2/Sem3/5/main.cpp
+iostream
+-
+math.h
+-
+Figure.h
+F:/Chernousov/labs2/Sem3/5/Figure.h
+
