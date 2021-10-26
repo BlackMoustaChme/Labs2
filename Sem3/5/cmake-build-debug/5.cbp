@@ -82,16 +82,22 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="F:/Chernousov/labs2/Sem3/5/2DFigure.cpp">
+			<Option target="5"/>
+		</Unit>
+		<Unit filename="F:/Chernousov/labs2/Sem3/5/2DFigure.h">
+			<Option target="5"/>
+		</Unit>
+		<Unit filename="F:/Chernousov/labs2/Sem3/5/3DFigure.cpp">
+			<Option target="5"/>
+		</Unit>
+		<Unit filename="F:/Chernousov/labs2/Sem3/5/3DFigure.h">
+			<Option target="5"/>
+		</Unit>
 		<Unit filename="F:/Chernousov/labs2/Sem3/5/App.cpp">
 			<Option target="5"/>
 		</Unit>
 		<Unit filename="F:/Chernousov/labs2/Sem3/5/App.h">
-			<Option target="5"/>
-		</Unit>
-		<Unit filename="F:/Chernousov/labs2/Sem3/5/Figure.cpp">
-			<Option target="5"/>
-		</Unit>
-		<Unit filename="F:/Chernousov/labs2/Sem3/5/Figure.h">
 			<Option target="5"/>
 		</Unit>
 		<Unit filename="F:/Chernousov/labs2/Sem3/5/main.cpp">

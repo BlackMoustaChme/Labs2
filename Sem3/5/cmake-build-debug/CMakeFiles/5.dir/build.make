@@ -80,23 +80,23 @@ CMakeFiles\5.dir\main.cpp.s: cmake_force
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\5.dir\main.cpp.s /c F:\Chernousov\labs2\Sem3\5\main.cpp
 <<
 
-CMakeFiles\5.dir\Figure.cpp.obj: CMakeFiles\5.dir\flags.make
-CMakeFiles\5.dir\Figure.cpp.obj: ..\Figure.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Chernousov\labs2\Sem3\5\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/5.dir/Figure.cpp.obj"
+CMakeFiles\5.dir\2DFigure.cpp.obj: CMakeFiles\5.dir\flags.make
+CMakeFiles\5.dir\2DFigure.cpp.obj: ..\2DFigure.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Chernousov\labs2\Sem3\5\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/5.dir/2DFigure.cpp.obj"
 	C:\PROGRA~2\MIB055~1\2017\COMMUN~1\VC\Tools\MSVC\1411~1.255\bin\HostX86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\5.dir\Figure.cpp.obj /FdCMakeFiles\5.dir\ /FS -c F:\Chernousov\labs2\Sem3\5\Figure.cpp
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\5.dir\2DFigure.cpp.obj /FdCMakeFiles\5.dir\ /FS -c F:\Chernousov\labs2\Sem3\5\2DFigure.cpp
 <<
 
-CMakeFiles\5.dir\Figure.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/5.dir/Figure.cpp.i"
-	C:\PROGRA~2\MIB055~1\2017\COMMUN~1\VC\Tools\MSVC\1411~1.255\bin\HostX86\x86\cl.exe > CMakeFiles\5.dir\Figure.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E F:\Chernousov\labs2\Sem3\5\Figure.cpp
+CMakeFiles\5.dir\2DFigure.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/5.dir/2DFigure.cpp.i"
+	C:\PROGRA~2\MIB055~1\2017\COMMUN~1\VC\Tools\MSVC\1411~1.255\bin\HostX86\x86\cl.exe > CMakeFiles\5.dir\2DFigure.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E F:\Chernousov\labs2\Sem3\5\2DFigure.cpp
 <<
 
-CMakeFiles\5.dir\Figure.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/5.dir/Figure.cpp.s"
+CMakeFiles\5.dir\2DFigure.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/5.dir/2DFigure.cpp.s"
 	C:\PROGRA~2\MIB055~1\2017\COMMUN~1\VC\Tools\MSVC\1411~1.255\bin\HostX86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\5.dir\Figure.cpp.s /c F:\Chernousov\labs2\Sem3\5\Figure.cpp
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\5.dir\2DFigure.cpp.s /c F:\Chernousov\labs2\Sem3\5\2DFigure.cpp
 <<
 
 CMakeFiles\5.dir\App.cpp.obj: CMakeFiles\5.dir\flags.make
@@ -118,21 +118,42 @@ CMakeFiles\5.dir\App.cpp.s: cmake_force
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\5.dir\App.cpp.s /c F:\Chernousov\labs2\Sem3\5\App.cpp
 <<
 
+CMakeFiles\5.dir\3DFigure.cpp.obj: CMakeFiles\5.dir\flags.make
+CMakeFiles\5.dir\3DFigure.cpp.obj: ..\3DFigure.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Chernousov\labs2\Sem3\5\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/5.dir/3DFigure.cpp.obj"
+	C:\PROGRA~2\MIB055~1\2017\COMMUN~1\VC\Tools\MSVC\1411~1.255\bin\HostX86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\5.dir\3DFigure.cpp.obj /FdCMakeFiles\5.dir\ /FS -c F:\Chernousov\labs2\Sem3\5\3DFigure.cpp
+<<
+
+CMakeFiles\5.dir\3DFigure.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/5.dir/3DFigure.cpp.i"
+	C:\PROGRA~2\MIB055~1\2017\COMMUN~1\VC\Tools\MSVC\1411~1.255\bin\HostX86\x86\cl.exe > CMakeFiles\5.dir\3DFigure.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E F:\Chernousov\labs2\Sem3\5\3DFigure.cpp
+<<
+
+CMakeFiles\5.dir\3DFigure.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/5.dir/3DFigure.cpp.s"
+	C:\PROGRA~2\MIB055~1\2017\COMMUN~1\VC\Tools\MSVC\1411~1.255\bin\HostX86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\5.dir\3DFigure.cpp.s /c F:\Chernousov\labs2\Sem3\5\3DFigure.cpp
+<<
+
 # Object files for target 5
 5_OBJECTS = \
 "CMakeFiles\5.dir\main.cpp.obj" \
-"CMakeFiles\5.dir\Figure.cpp.obj" \
-"CMakeFiles\5.dir\App.cpp.obj"
+"CMakeFiles\5.dir\2DFigure.cpp.obj" \
+"CMakeFiles\5.dir\App.cpp.obj" \
+"CMakeFiles\5.dir\3DFigure.cpp.obj"
 
 # External object files for target 5
 5_EXTERNAL_OBJECTS =
 
 5.exe: CMakeFiles\5.dir\main.cpp.obj
-5.exe: CMakeFiles\5.dir\Figure.cpp.obj
+5.exe: CMakeFiles\5.dir\2DFigure.cpp.obj
 5.exe: CMakeFiles\5.dir\App.cpp.obj
+5.exe: CMakeFiles\5.dir\3DFigure.cpp.obj
 5.exe: CMakeFiles\5.dir\build.make
 5.exe: CMakeFiles\5.dir\objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=F:\Chernousov\labs2\Sem3\5\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable 5.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=F:\Chernousov\labs2\Sem3\5\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable 5.exe"
 	"C:\Program Files\JetBrains\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\5.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100162~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100162~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MIB055~1\2017\COMMUN~1\VC\Tools\MSVC\1411~1.255\bin\HostX86\x86\link.exe /nologo @CMakeFiles\5.dir\objects1.rsp @<<
  /out:5.exe /implib:5.lib /pdb:F:\Chernousov\labs2\Sem3\5\cmake-build-debug\5.pdb /version:0.0  /machine:X86 /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
 <<

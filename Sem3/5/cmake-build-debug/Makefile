@@ -127,6 +127,60 @@ depend:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\5.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\5.dir\build
 .PHONY : 5\fast
 
+2DFigure.obj: 2DFigure.cpp.obj
+
+.PHONY : 2DFigure.obj
+
+# target to build an object file
+2DFigure.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\5.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\5.dir\2DFigure.cpp.obj
+.PHONY : 2DFigure.cpp.obj
+
+2DFigure.i: 2DFigure.cpp.i
+
+.PHONY : 2DFigure.i
+
+# target to preprocess a source file
+2DFigure.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\5.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\5.dir\2DFigure.cpp.i
+.PHONY : 2DFigure.cpp.i
+
+2DFigure.s: 2DFigure.cpp.s
+
+.PHONY : 2DFigure.s
+
+# target to generate assembly for a file
+2DFigure.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\5.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\5.dir\2DFigure.cpp.s
+.PHONY : 2DFigure.cpp.s
+
+3DFigure.obj: 3DFigure.cpp.obj
+
+.PHONY : 3DFigure.obj
+
+# target to build an object file
+3DFigure.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\5.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\5.dir\3DFigure.cpp.obj
+.PHONY : 3DFigure.cpp.obj
+
+3DFigure.i: 3DFigure.cpp.i
+
+.PHONY : 3DFigure.i
+
+# target to preprocess a source file
+3DFigure.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\5.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\5.dir\3DFigure.cpp.i
+.PHONY : 3DFigure.cpp.i
+
+3DFigure.s: 3DFigure.cpp.s
+
+.PHONY : 3DFigure.s
+
+# target to generate assembly for a file
+3DFigure.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\5.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\5.dir\3DFigure.cpp.s
+.PHONY : 3DFigure.cpp.s
+
 App.obj: App.cpp.obj
 
 .PHONY : App.obj
@@ -153,33 +207,6 @@ App.s: App.cpp.s
 App.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\5.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\5.dir\App.cpp.s
 .PHONY : App.cpp.s
-
-Figure.obj: Figure.cpp.obj
-
-.PHONY : Figure.obj
-
-# target to build an object file
-Figure.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\5.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\5.dir\Figure.cpp.obj
-.PHONY : Figure.cpp.obj
-
-Figure.i: Figure.cpp.i
-
-.PHONY : Figure.i
-
-# target to preprocess a source file
-Figure.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\5.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\5.dir\Figure.cpp.i
-.PHONY : Figure.cpp.i
-
-Figure.s: Figure.cpp.s
-
-.PHONY : Figure.s
-
-# target to generate assembly for a file
-Figure.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\5.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\5.dir\Figure.cpp.s
-.PHONY : Figure.cpp.s
 
 main.obj: main.cpp.obj
 
@@ -217,12 +244,15 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... 5
+	@echo ... 2DFigure.obj
+	@echo ... 2DFigure.i
+	@echo ... 2DFigure.s
+	@echo ... 3DFigure.obj
+	@echo ... 3DFigure.i
+	@echo ... 3DFigure.s
 	@echo ... App.obj
 	@echo ... App.i
 	@echo ... App.s
-	@echo ... Figure.obj
-	@echo ... Figure.i
-	@echo ... Figure.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

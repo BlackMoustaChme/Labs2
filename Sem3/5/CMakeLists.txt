@@ -3,4 +3,4 @@ project(5)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(5 main.cpp Figure.h Figure.cpp App.h App.cpp)
+add_executable(5 main.cpp 2DFigure.h 2DFigure.cpp App.h App.cpp 3DFigure.cpp 3DFigure.h)
