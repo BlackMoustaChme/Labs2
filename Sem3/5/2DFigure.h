@@ -22,6 +22,9 @@ public:
     Triangle(double, double, double);
     virtual double CalcPerimeter();
     virtual double CalcSquare();
+    double GetA();
+    double GetB();
+    double GetC();
     Triangle* Clone();
 };
 
@@ -34,6 +37,7 @@ public:
     Circle(double);
     virtual double CalcPerimeter();
     virtual double CalcSquare();
+    double GetR();
     Circle* Clone();
 
 };

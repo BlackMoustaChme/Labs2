@@ -6,25 +6,7 @@
 
 #IncludeRegexTransform: 
 
-F:/Chernousov/labs2/Sem3/5/2DFigure.cpp
-iostream
--
-cmath
--
-2DFigure.h
 F:/Chernousov/labs2/Sem3/5/2DFigure.h
-
-F:/Chernousov/labs2/Sem3/5/2DFigure.h
-
-F:/Chernousov/labs2/Sem3/5/3DFigure.cpp
-iostream
--
-math.h
--
-2DFigure.h
-F:/Chernousov/labs2/Sem3/5/2DFigure.h
-3DFigure.h
-F:/Chernousov/labs2/Sem3/5/3DFigure.h
 
 F:/Chernousov/labs2/Sem3/5/3DFigure.h
 2DFigure.h

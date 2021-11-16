@@ -2,11 +2,24 @@
 #include <iostream>
 #include <cmath>
 #include "2DFigure.h"
+using namespace std;
 Triangle::Triangle(double a1, double b1, double c1)
 {
     a=a1;
     b=b1;
     c=c1;
+}
+double Triangle::GetA()
+{
+    return a;
+}
+double Triangle::GetB()
+{
+    return b;
+}
+double Triangle::GetC()
+{
+    return c;
 }
 Triangle* Triangle::Clone()
 {
@@ -25,6 +38,10 @@ double Triangle::CalcSquare()
 Circle::Circle(double r1)
 {
     r=r1;
+}
+double Circle::GetR()
+{
+    return r;
 }
 Circle* Circle::Clone()
 {

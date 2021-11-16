@@ -6,7 +6,32 @@ using namespace std;
 
 int main()
 {
-    int key=0;
+    cout<<"Start"<<endl;
+
+    TwDFigure *A=new Triangle(3,4,5);
+    TwDFigure *B = new Circle(3);
+    //TwDFigure *E=new Hexagramm(2,6);
+
+    CircleCylinder* circleCylinder = CircleCylinder::CreateInstance(static_cast<Circle*>(B),2);
+
+    cout<< "Volume: " << circleCylinder->CalcVolume() << endl;
+
+    TriangleCylinder* triangleCylinder = TriangleCylinder::CreateInstance(static_cast<Triangle*>(A),2);
+
+    cout<< "Volume: " << triangleCylinder->CalcVolume() << endl;
+
+
+    delete B;
+    delete circleCylinder;
+    delete A;
+    delete triangleCylinder;
+
+    cout<<"Finish"<<endl;
+    return 0;
+
+    //Clone ver
+
+    /*int key=0;
     Triangle t();
     Circle c1();
     Hexagramm h();
@@ -38,5 +63,6 @@ int main()
         cout<<F->CalcVolume()<<endl;
     }
 
-    return 0;
+    return 0;*/
+
 }
