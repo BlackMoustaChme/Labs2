@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+F:/Chernousov/labs2/Sem3/7/2DFigure.cpp
+iostream
+-
+cmath
+-
+2DFigure.h
+F:/Chernousov/labs2/Sem3/7/2DFigure.h
+
+F:/Chernousov/labs2/Sem3/7/2DFigure.h
+
+F:/Chernousov/labs2/Sem3/7/3DFigure.cpp
+iostream
+-
+math.h
+-
+2DFigure.h
+F:/Chernousov/labs2/Sem3/7/2DFigure.h
+3DFigure.h
+F:/Chernousov/labs2/Sem3/7/3DFigure.h
+
+F:/Chernousov/labs2/Sem3/7/3DFigure.h
+2DFigure.h
+F:/Chernousov/labs2/Sem3/7/2DFigure.h
+
+F:/Chernousov/labs2/Sem3/7/App.cpp
+
+F:/Chernousov/labs2/Sem3/7/main.cpp
+iostream
+-
+math.h
+-
+2DFigure.h
+F:/Chernousov/labs2/Sem3/7/2DFigure.h
+3DFigure.h
+F:/Chernousov/labs2/Sem3/7/3DFigure.h
+
