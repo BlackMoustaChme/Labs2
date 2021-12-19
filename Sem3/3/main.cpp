@@ -9,7 +9,7 @@
 int main()
 {
     App app;
-    app.start();
+    app.Start();
     return 0;
 
 }

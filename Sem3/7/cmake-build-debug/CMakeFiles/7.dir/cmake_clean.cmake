@@ -6,6 +6,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/7.dir/2DFigure.cpp.obj"
   "CMakeFiles/7.dir/3DFigure.cpp.obj"
   "CMakeFiles/7.dir/App.cpp.obj"
+  "CMakeFiles/7.dir/Except.cpp.obj"
   "CMakeFiles/7.dir/main.cpp.obj"
 )
 

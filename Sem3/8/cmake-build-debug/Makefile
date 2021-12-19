@@ -52,10 +52,10 @@ RM = "C:\Program Files\JetBrains\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = F:\Chernousov\labs2\Sem3\7
+CMAKE_SOURCE_DIR = F:\Chernousov\labs2\Sem3\8
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = F:\Chernousov\labs2\Sem3\7\cmake-build-debug
+CMAKE_BINARY_DIR = F:\Chernousov\labs2\Sem3\8\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -84,9 +84,9 @@ rebuild_cache\fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start F:\Chernousov\labs2\Sem3\7\cmake-build-debug\CMakeFiles F:\Chernousov\labs2\Sem3\7\cmake-build-debug\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start F:\Chernousov\labs2\Sem3\8\cmake-build-debug\CMakeFiles F:\Chernousov\labs2\Sem3\8\cmake-build-debug\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) all
-	$(CMAKE_COMMAND) -E cmake_progress_start F:\Chernousov\labs2\Sem3\7\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start F:\Chernousov\labs2\Sem3\8\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -115,17 +115,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named 7
+# Target rules for targets named 8
 
 # Build rule for target.
-7 : cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) 7
-.PHONY : 7
+8 : cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) 8
+.PHONY : 8
 
 # fast build rule for target.
-7\fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\7.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\7.dir\build
-.PHONY : 7\fast
+8\fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\8.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\8.dir\build
+.PHONY : 8\fast
 
 2DFigure.obj: 2DFigure.cpp.obj
 
@@ -133,7 +133,7 @@ depend:
 
 # target to build an object file
 2DFigure.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\7.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\7.dir\2DFigure.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\8.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\8.dir\2DFigure.cpp.obj
 .PHONY : 2DFigure.cpp.obj
 
 2DFigure.i: 2DFigure.cpp.i
@@ -142,7 +142,7 @@ depend:
 
 # target to preprocess a source file
 2DFigure.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\7.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\7.dir\2DFigure.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\8.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\8.dir\2DFigure.cpp.i
 .PHONY : 2DFigure.cpp.i
 
 2DFigure.s: 2DFigure.cpp.s
@@ -151,7 +151,7 @@ depend:
 
 # target to generate assembly for a file
 2DFigure.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\7.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\7.dir\2DFigure.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\8.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\8.dir\2DFigure.cpp.s
 .PHONY : 2DFigure.cpp.s
 
 3DFigure.obj: 3DFigure.cpp.obj
@@ -160,7 +160,7 @@ depend:
 
 # target to build an object file
 3DFigure.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\7.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\7.dir\3DFigure.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\8.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\8.dir\3DFigure.cpp.obj
 .PHONY : 3DFigure.cpp.obj
 
 3DFigure.i: 3DFigure.cpp.i
@@ -169,7 +169,7 @@ depend:
 
 # target to preprocess a source file
 3DFigure.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\7.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\7.dir\3DFigure.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\8.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\8.dir\3DFigure.cpp.i
 .PHONY : 3DFigure.cpp.i
 
 3DFigure.s: 3DFigure.cpp.s
@@ -178,35 +178,8 @@ depend:
 
 # target to generate assembly for a file
 3DFigure.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\7.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\7.dir\3DFigure.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\8.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\8.dir\3DFigure.cpp.s
 .PHONY : 3DFigure.cpp.s
-
-App.obj: App.cpp.obj
-
-.PHONY : App.obj
-
-# target to build an object file
-App.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\7.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\7.dir\App.cpp.obj
-.PHONY : App.cpp.obj
-
-App.i: App.cpp.i
-
-.PHONY : App.i
-
-# target to preprocess a source file
-App.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\7.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\7.dir\App.cpp.i
-.PHONY : App.cpp.i
-
-App.s: App.cpp.s
-
-.PHONY : App.s
-
-# target to generate assembly for a file
-App.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\7.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\7.dir\App.cpp.s
-.PHONY : App.cpp.s
 
 Except.obj: Except.cpp.obj
 
@@ -214,7 +187,7 @@ Except.obj: Except.cpp.obj
 
 # target to build an object file
 Except.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\7.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\7.dir\Except.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\8.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\8.dir\Except.cpp.obj
 .PHONY : Except.cpp.obj
 
 Except.i: Except.cpp.i
@@ -223,7 +196,7 @@ Except.i: Except.cpp.i
 
 # target to preprocess a source file
 Except.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\7.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\7.dir\Except.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\8.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\8.dir\Except.cpp.i
 .PHONY : Except.cpp.i
 
 Except.s: Except.cpp.s
@@ -232,7 +205,7 @@ Except.s: Except.cpp.s
 
 # target to generate assembly for a file
 Except.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\7.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\7.dir\Except.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\8.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\8.dir\Except.cpp.s
 .PHONY : Except.cpp.s
 
 main.obj: main.cpp.obj
@@ -241,7 +214,7 @@ main.obj: main.cpp.obj
 
 # target to build an object file
 main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\7.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\7.dir\main.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\8.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\8.dir\main.cpp.obj
 .PHONY : main.cpp.obj
 
 main.i: main.cpp.i
@@ -250,7 +223,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\7.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\7.dir\main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\8.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\8.dir\main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -259,7 +232,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\7.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\7.dir\main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\8.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\8.dir\main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -270,16 +243,13 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... 7
+	@echo ... 8
 	@echo ... 2DFigure.obj
 	@echo ... 2DFigure.i
 	@echo ... 2DFigure.s
 	@echo ... 3DFigure.obj
 	@echo ... 3DFigure.i
 	@echo ... 3DFigure.s
-	@echo ... App.obj
-	@echo ... App.i
-	@echo ... App.s
 	@echo ... Except.obj
 	@echo ... Except.i
 	@echo ... Except.s

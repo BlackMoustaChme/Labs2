@@ -3,4 +3,4 @@ project(7)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(7 main.cpp 2DFigure.cpp 2DFigure.h 3DFigure.cpp 3DFigure.h App.cpp App.h)
+add_executable(7 main.cpp 2DFigure.cpp 2DFigure.h 3DFigure.cpp 3DFigure.h App.cpp App.h cmake-build-debug/Except.cpp Except.cpp)

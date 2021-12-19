@@ -7,6 +7,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "F:/Chernousov/labs2/Sem3/7/2DFigure.cpp" "F:/Chernousov/labs2/Sem3/7/cmake-build-debug/CMakeFiles/7.dir/2DFigure.cpp.obj"
   "F:/Chernousov/labs2/Sem3/7/3DFigure.cpp" "F:/Chernousov/labs2/Sem3/7/cmake-build-debug/CMakeFiles/7.dir/3DFigure.cpp.obj"
   "F:/Chernousov/labs2/Sem3/7/App.cpp" "F:/Chernousov/labs2/Sem3/7/cmake-build-debug/CMakeFiles/7.dir/App.cpp.obj"
+  "F:/Chernousov/labs2/Sem3/7/cmake-build-debug/Except.cpp" "F:/Chernousov/labs2/Sem3/7/cmake-build-debug/CMakeFiles/7.dir/Except.cpp.obj"
   "F:/Chernousov/labs2/Sem3/7/main.cpp" "F:/Chernousov/labs2/Sem3/7/cmake-build-debug/CMakeFiles/7.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "MSVC")

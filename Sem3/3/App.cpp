@@ -4,3 +4,11 @@
 #include <dos.h>
 
 #include "App.h"
+void Getdata();
+{
+
+}
+void Start();
+{
+
+}
