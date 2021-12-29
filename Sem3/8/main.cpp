@@ -7,7 +7,7 @@ int main()
 {
     double r, h;
     bool check = true;
-    Cylinder<Circle>* cylinder = NULL;
+    Cylinder<Circle>* сylinder = NULL;
     while (check)
     {
         cout << "Enter the radius and height: " << endl;
@@ -18,7 +18,7 @@ int main()
             Circle* circle = new Circle(r);
             try
             {
-                Cylinder = new Cylinder<Circle>(circle, h);
+                сylinder = new Cylinder<Circle>(circle, h);
                 delete circle;
                 check = false;
             }
@@ -35,6 +35,6 @@ int main()
             cout << "Try again..." << endl << endl;
         }
     }
-    cout << Cylinder->CalcVolume();
-    delete Cylinder;
+    cout << сylinder->CalcVolume();
+    delete сylinder;
 }

@@ -1,4 +1,4 @@
-#define _USE_MATH_DEFINES
+/*#define _USE_MATH_DEFINES
 #include <iostream>
 #include <math.h>
 #include "2DFigure.h"
@@ -70,7 +70,7 @@ TwDFigure* TriangleCylinder::CloneTwDFigure(TwDFigure* f)
     cout<<"TriangleCylinder::CreateFigure"<<endl;
     Triangle* c = static_cast<Triangle*>(f);
     return new Triangle(c->GetA(), c->GetB(), c->GetC());
-}
+}*/
 
 
 
