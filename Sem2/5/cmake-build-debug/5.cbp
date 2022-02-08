@@ -82,6 +82,18 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="F:/Chernousov/labs2/Sem2/5/DLList.cpp">
+			<Option target="5"/>
+		</Unit>
+		<Unit filename="F:/Chernousov/labs2/Sem2/5/DLList.h">
+			<Option target="5"/>
+		</Unit>
+		<Unit filename="F:/Chernousov/labs2/Sem2/5/Phone.cpp">
+			<Option target="5"/>
+		</Unit>
+		<Unit filename="F:/Chernousov/labs2/Sem2/5/Phone.h">
+			<Option target="5"/>
+		</Unit>
 		<Unit filename="F:/Chernousov/labs2/Sem2/5/main.cpp">
 			<Option target="5"/>
 		</Unit>

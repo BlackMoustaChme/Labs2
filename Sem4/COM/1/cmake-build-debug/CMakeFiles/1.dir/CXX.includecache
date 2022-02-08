@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+F:/Chernousov/labs2/Sem4/COM/1/iserv.h
+
+F:/Chernousov/labs2/Sem4/COM/1/serv.cpp
+iostream
+-
+serv.h
+F:/Chernousov/labs2/Sem4/COM/1/serv.h
+
+F:/Chernousov/labs2/Sem4/COM/1/serv.h
+iserv.h
+F:/Chernousov/labs2/Sem4/COM/1/iserv.h
+

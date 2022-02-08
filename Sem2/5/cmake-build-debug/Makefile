@@ -127,6 +127,60 @@ depend:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\5.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\5.dir\build
 .PHONY : 5\fast
 
+DLList.obj: DLList.cpp.obj
+
+.PHONY : DLList.obj
+
+# target to build an object file
+DLList.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\5.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\5.dir\DLList.cpp.obj
+.PHONY : DLList.cpp.obj
+
+DLList.i: DLList.cpp.i
+
+.PHONY : DLList.i
+
+# target to preprocess a source file
+DLList.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\5.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\5.dir\DLList.cpp.i
+.PHONY : DLList.cpp.i
+
+DLList.s: DLList.cpp.s
+
+.PHONY : DLList.s
+
+# target to generate assembly for a file
+DLList.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\5.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\5.dir\DLList.cpp.s
+.PHONY : DLList.cpp.s
+
+Phone.obj: Phone.cpp.obj
+
+.PHONY : Phone.obj
+
+# target to build an object file
+Phone.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\5.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\5.dir\Phone.cpp.obj
+.PHONY : Phone.cpp.obj
+
+Phone.i: Phone.cpp.i
+
+.PHONY : Phone.i
+
+# target to preprocess a source file
+Phone.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\5.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\5.dir\Phone.cpp.i
+.PHONY : Phone.cpp.i
+
+Phone.s: Phone.cpp.s
+
+.PHONY : Phone.s
+
+# target to generate assembly for a file
+Phone.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\5.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\5.dir\Phone.cpp.s
+.PHONY : Phone.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -163,6 +217,12 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... 5
+	@echo ... DLList.obj
+	@echo ... DLList.i
+	@echo ... DLList.s
+	@echo ... Phone.obj
+	@echo ... Phone.i
+	@echo ... Phone.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
