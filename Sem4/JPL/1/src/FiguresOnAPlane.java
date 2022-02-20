@@ -1,5 +1,5 @@
-public abstract class FiguresOnAPlane {
-    public abstract double CalcPerimetr();
-    public abstract double CalcSquare();
+interface FiguresOnAPlane {
+    double CalcPerimetr();
+    double CalcSquare();
 //    public abstract FiguresOnAPlane Clone();
 }

@@ -1,4 +1,4 @@
-public class Cylinder extends VolumetricFigures{
+public class Cylinder implements VolumetricFigures{
 
     private double h;
 

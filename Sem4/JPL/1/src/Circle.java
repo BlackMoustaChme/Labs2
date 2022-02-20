@@ -1,19 +1,23 @@
-public class Circle extends FiguresOnAPlane {
+public class Circle implements FiguresOnAPlane {
 
     private double r;
 
     @Override
     public double CalcPerimetr() {
-        return 0;
+        return 2*Math.PI*r;
     }
 
     @Override
     public double CalcSquare() {
-        return 0;
+        return Math.PI*r*r;
     }
-    public Circle(double r){
-
-        this.r=r;
-
+    public Circle(double r) throws Exception{
+        if (r>0){
+            this.r = r;
+        }
+        else throw new Exception("Error, can't create this Circle");
+    }
+    public double GetR(){
+        return r;
     }
 }

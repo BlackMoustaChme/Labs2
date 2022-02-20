@@ -1,3 +1,3 @@
-public abstract class VolumetricFigures {
-    public abstract double CalcVolume();
+interface VolumetricFigures {
+    double CalcVolume();
 }
