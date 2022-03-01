@@ -11,24 +11,25 @@ while True:
     if key == "1":
         print("№1")
 
-        print("Ввдите список числе(без пробелов):")
+        print("Введите список чисел(без пробелов):")
         print(len(set(input())))
 
     elif key == "2":
         print("№2")
 
-        print("Ввдите список числе(с пробелами):")
+        print("Ввдите список чисел(с пробелами):")
         print(len(set(input().split()) & set(input().split())))
 
     elif key == "3":
         print("№3")
 
-        print("Ввдите список числе(с пробелами):")
+        print("Введите список чисел(с пробелами):")
         print(*sorted(set(input().split()) & set(input().split()), key=int))
 
     elif key == "4":
         print("№4")
 
+        print("Введите список чисел(с пробелами):")
         numbers = [int(i) for i in input().split()]
         before = set()
         for number in numbers:
@@ -42,6 +43,7 @@ while True:
     elif key == "5":
         print("№5")
 
+        print("Введите число строк а далее сами строки:")
         words = set()
         for i in range(int(input())):
             words.update(input().split())
