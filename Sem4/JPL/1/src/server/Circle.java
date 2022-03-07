@@ -1,6 +1,10 @@
+package server;
+
+import server.FiguresOnAPlane;
+
 public class Circle implements FiguresOnAPlane {
 
-    private double r;
+    protected double r;
 
     @Override
     public double CalcPerimetr() {
@@ -15,7 +19,7 @@ public class Circle implements FiguresOnAPlane {
         if (r>0){
             this.r = r;
         }
-        else throw new Exception("Error, can't create this Circle");
+        else throw new Exception("Error, can't create this server.Circle");
     }
     public double GetR(){
         return r;

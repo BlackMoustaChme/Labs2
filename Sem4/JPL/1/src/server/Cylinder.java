@@ -1,4 +1,6 @@
-public class Cylinder implements VolumetricFigures{
+package server;
+
+public class Cylinder implements VolumetricFigures {
 
     private double h;
 

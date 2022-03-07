@@ -1,4 +1,6 @@
-public class Triangle implements FiguresOnAPlane{
+package server;
+
+public class Triangle implements FiguresOnAPlane {
     private double a;
     private double b;
     private double c;
@@ -18,7 +20,7 @@ public class Triangle implements FiguresOnAPlane{
             this.b = b;
             this.c = c;
         }
-        else throw new Exception("Error, can't create this Triangle");
+        else throw new Exception("Error, can't create this server.Triangle");
     }
     public double GetA(){
         return a;

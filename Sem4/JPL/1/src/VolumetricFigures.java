@@ -1,3 +1,0 @@
-interface VolumetricFigures {
-    double CalcVolume();
-}
