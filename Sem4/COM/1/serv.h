@@ -1,6 +1,7 @@
 #ifndef INC_1_SERV_H
 #define INC_1_SERV_H
 #include "iserv.h"
+#include "IUnknown.h"
 class Server: public IServer
 {
 private:
@@ -12,6 +13,7 @@ public:
     Server();
     //Server(int a);
     virtual void func();
+    virtual HRESULT_ QueryInterface_(IID_ , void **ppv);
     ~Server();
 };
 

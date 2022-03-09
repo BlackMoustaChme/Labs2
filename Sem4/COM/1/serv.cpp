@@ -1,6 +1,7 @@
 #include <iostream>
 #include "serv.h"
 
+
 using std::cout;//, std::endl, std::cin;
 /*Server::Server(int a)
 {
@@ -12,14 +13,27 @@ Server::Server() {
 }
 
 void Server::func() {
-//    cout<<*a;
-    cout << *a + *b;
+
+    cout << "SERV1_FUNC" <<*a + *b;
 
 }
-
-IServer* CreateInstance(){
+HRESULT_ Server::QueryInterface_(IID_ iid, void **ppv){
+    /*if (iid == 0){
+        *ppv=(void *)(IUnknown_*)this;
+        return 0;
+    }*/
+    if (iid == 1){
+        *ppv=(void *)(IServer*)this;
+        return 0;
+    }
+    else{
+        *ppv=NULL;
+        return 1;
+    }
+}
+/*IServer* CreateInstance(){
     return new Server();
-}
+}*/
 Server::~Server() {
 
 }
