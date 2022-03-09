@@ -10,7 +10,7 @@ using std::cout;//, std::endl, std::cin;
 Server2::Server2() {
     a = new int(3);
     b = new int(3);
-    c = new int(4)
+    c = new int(4);
 }
 
 void Server2::func() {

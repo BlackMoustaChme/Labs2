@@ -3,25 +3,20 @@
 #include "serv.h"
 #include "serv2.h"
 HRESULT_ CreateInstance(CLSID_  clsid, IID_  iid, void **ppv){
+    HRESULT_ res;
     if(clsid == 1){
-        if(iid == 1){
-            Server *s = new Server();
-            //* ppv = (void*)(IUnknown_*)(IServer*)
-            return  0;
+
+        Server *s = new Server();
+        res = s->QueryInterface_(iid, ppv);
+        return res;
+
         }
-    }
     if(clsid == 2){
 
-        if(iid == 1){
-            Server2 *s = new Server2();
-            //* ppv = (void*)(IUnknown_*)(IServer*)
-            return 0;
-        }
-        if(iid == 2){
             Server2 *s2 = new Server2();
-            //* ppv = (void*)(IUnknown_*)(IServer*)
-            return 0;
-        }
+            res = s2->QueryInterface_(iid, ppv);
+            return res;
+
     }
     if(iid == 0){
         Server *s = new Server();
