@@ -4,7 +4,7 @@
 #include "IClassFactory.h"
 class ServerFactory: public IClassFactory_{
 private:
-    int count = 0;
+    int CountRef = 0;
 public:
     ServerFactory();
     virtual HRESULT_ CreateInstance(IID_, void **ppv);

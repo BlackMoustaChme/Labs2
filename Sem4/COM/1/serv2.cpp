@@ -3,10 +3,7 @@
 
 
 using std::cout;//, std::endl, std::cin;
-/*Server::Server(int a)
-{
-    this->a=a;
-}*/
+
 Server2::Server2() {
     a = new int(3);
     b = new int(3);
@@ -22,10 +19,7 @@ void Server2::func2() {
 
 }
 HRESULT_ Server2::QueryInterface_(IID_ iid, void **ppv){
-    /*if (iid == 0){
-        *ppv=(IUnknown_*)this;
-        return 0;
-    }*/
+
     if (iid == 1){
         *ppv=(void *)(IServer*)this;
         return 0;
@@ -38,10 +32,23 @@ HRESULT_ Server2::QueryInterface_(IID_ iid, void **ppv){
         *ppv=NULL;
         return 1;
     }
+    AddRef();
 }
-/*IServer* CreateInstance(){
-    return new Server();
-}*/
+U_LONG_ Server2::AddRef() {
+    CountRef++;
+    cout<<"AddReference"<<CountRef;
+    return CountRef;
+}
+U_LONG_ Server2::Release() {
+    CountRef--;
+    cout<<"DeleteReference"<<CountRef;
+    if(CountRef == 0)
+    {
+        delete this;
+    }
+    return CountRef;
+}
+
 Server2::~Server2() {
 
 }

@@ -17,11 +17,8 @@ HRESULT_ ServerFactory::CreateInstance(IID_ iid, void **ppv) {
     }
 }
 HRESULT_ ServerFactory::QueryInterface_(IID_ iid, void **ppv){
-    /*if (iid == 0){
-        *ppv=(void *)(IUnknown_*)this;
-        return 0;
-    }*/
-    if (iid = 0)
+
+    if (iid == 0)
     {
         *ppv=(void *)(IUnknown_*)((IClassFactory_*)this);
         return 0;
@@ -34,4 +31,5 @@ HRESULT_ ServerFactory::QueryInterface_(IID_ iid, void **ppv){
         *ppv=NULL;
         return 1;
     }
+    AddRef();
 }

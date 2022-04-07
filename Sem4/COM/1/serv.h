@@ -5,15 +5,16 @@
 class Server: public IServer
 {
 private:
-
+    int CountRef = 0;
     int *a;
     int *b;
 
 public:
     Server();
-    //Server(int a);
     virtual void func();
     virtual HRESULT_ QueryInterface_(IID_ , void **ppv);
+    virtual U_LONG_ AddRef();
+    virtual U_LONG_ Release();
     ~Server();
 };
 
