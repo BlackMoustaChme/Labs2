@@ -82,7 +82,31 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/ClientServerWrapper.cpp">
+			<Option target="1"/>
+		</Unit>
+		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/ClientServerWrapper.h">
+			<Option target="1"/>
+		</Unit>
+		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/IClassFactory.h">
+			<Option target="1"/>
+		</Unit>
+		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/IUnknown.cpp">
+			<Option target="1"/>
+		</Unit>
+		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/IUnknown.h">
+			<Option target="1"/>
+		</Unit>
+		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/ServerFactory.cpp">
+			<Option target="1"/>
+		</Unit>
+		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/ServerFactory.h">
+			<Option target="1"/>
+		</Unit>
 		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/iserv.h">
+			<Option target="1"/>
+		</Unit>
+		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/iserv2.h">
 			<Option target="1"/>
 		</Unit>
 		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/main.cpp">
@@ -92,6 +116,12 @@
 			<Option target="1"/>
 		</Unit>
 		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/serv.h">
+			<Option target="1"/>
+		</Unit>
+		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/serv2.cpp">
+			<Option target="1"/>
+		</Unit>
+		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/serv2.h">
 			<Option target="1"/>
 		</Unit>
 		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/CMakeLists.txt">

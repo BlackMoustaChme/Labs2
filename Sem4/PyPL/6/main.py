@@ -1,6 +1,5 @@
 import math
 
-
 def factorials(n):
     result = 1
     for n_i in range(n):

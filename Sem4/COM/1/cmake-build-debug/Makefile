@@ -127,6 +127,87 @@ depend:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\1.dir\build
 .PHONY : 1\fast
 
+ClientServerWrapper.obj: ClientServerWrapper.cpp.obj
+
+.PHONY : ClientServerWrapper.obj
+
+# target to build an object file
+ClientServerWrapper.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\1.dir\ClientServerWrapper.cpp.obj
+.PHONY : ClientServerWrapper.cpp.obj
+
+ClientServerWrapper.i: ClientServerWrapper.cpp.i
+
+.PHONY : ClientServerWrapper.i
+
+# target to preprocess a source file
+ClientServerWrapper.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\1.dir\ClientServerWrapper.cpp.i
+.PHONY : ClientServerWrapper.cpp.i
+
+ClientServerWrapper.s: ClientServerWrapper.cpp.s
+
+.PHONY : ClientServerWrapper.s
+
+# target to generate assembly for a file
+ClientServerWrapper.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\1.dir\ClientServerWrapper.cpp.s
+.PHONY : ClientServerWrapper.cpp.s
+
+IUnknown.obj: IUnknown.cpp.obj
+
+.PHONY : IUnknown.obj
+
+# target to build an object file
+IUnknown.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\1.dir\IUnknown.cpp.obj
+.PHONY : IUnknown.cpp.obj
+
+IUnknown.i: IUnknown.cpp.i
+
+.PHONY : IUnknown.i
+
+# target to preprocess a source file
+IUnknown.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\1.dir\IUnknown.cpp.i
+.PHONY : IUnknown.cpp.i
+
+IUnknown.s: IUnknown.cpp.s
+
+.PHONY : IUnknown.s
+
+# target to generate assembly for a file
+IUnknown.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\1.dir\IUnknown.cpp.s
+.PHONY : IUnknown.cpp.s
+
+ServerFactory.obj: ServerFactory.cpp.obj
+
+.PHONY : ServerFactory.obj
+
+# target to build an object file
+ServerFactory.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\1.dir\ServerFactory.cpp.obj
+.PHONY : ServerFactory.cpp.obj
+
+ServerFactory.i: ServerFactory.cpp.i
+
+.PHONY : ServerFactory.i
+
+# target to preprocess a source file
+ServerFactory.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\1.dir\ServerFactory.cpp.i
+.PHONY : ServerFactory.cpp.i
+
+ServerFactory.s: ServerFactory.cpp.s
+
+.PHONY : ServerFactory.s
+
+# target to generate assembly for a file
+ServerFactory.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\1.dir\ServerFactory.cpp.s
+.PHONY : ServerFactory.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -181,6 +262,33 @@ serv.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\1.dir\serv.cpp.s
 .PHONY : serv.cpp.s
 
+serv2.obj: serv2.cpp.obj
+
+.PHONY : serv2.obj
+
+# target to build an object file
+serv2.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\1.dir\serv2.cpp.obj
+.PHONY : serv2.cpp.obj
+
+serv2.i: serv2.cpp.i
+
+.PHONY : serv2.i
+
+# target to preprocess a source file
+serv2.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\1.dir\serv2.cpp.i
+.PHONY : serv2.cpp.i
+
+serv2.s: serv2.cpp.s
+
+.PHONY : serv2.s
+
+# target to generate assembly for a file
+serv2.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\1.dir\serv2.cpp.s
+.PHONY : serv2.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -190,12 +298,24 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... 1
+	@echo ... ClientServerWrapper.obj
+	@echo ... ClientServerWrapper.i
+	@echo ... ClientServerWrapper.s
+	@echo ... IUnknown.obj
+	@echo ... IUnknown.i
+	@echo ... IUnknown.s
+	@echo ... ServerFactory.obj
+	@echo ... ServerFactory.i
+	@echo ... ServerFactory.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
 	@echo ... serv.obj
 	@echo ... serv.i
 	@echo ... serv.s
+	@echo ... serv2.obj
+	@echo ... serv2.i
+	@echo ... serv2.s
 .PHONY : help
 
 
