@@ -8,9 +8,9 @@ class Server2: public IServer, public IServer2
 {
 private:
     int CountRef = 0;
-    int *a;
-    int *b;
-    int *c;
+//    int *a;
+//    int *b;
+//    int *c;
 
 public:
     Server2();

@@ -3,6 +3,7 @@
 #include "serv.h"
 #include "serv2.h"
 #include "ServerFactory.h"
+#include "Server2Factory.h"
 HRESULT_ CreateInstance(CLSID_  clsid, IID_  iid, void **ppv){
     HRESULT_ res;
     if(clsid == 1){
@@ -41,7 +42,25 @@ HRESULT_ CreateInstance(CLSID_  clsid, IID_  iid, void **ppv){
 
 HRESULT_ GetClassObject(CLSID_  clsid, IID_  iid, void **ppv){
     HRESULT_ res;
-    if(clsid == 1){
+    switch (clsid) {
+        case 1:
+        {
+            ServerFactory *s = new ServerFactory();
+            res = s->QueryInterface_(iid, ppv);
+            return res;
+        }
+        case 2:
+        {
+            Server2Factory *s = new Server2Factory();
+            res = s->QueryInterface_(iid, ppv);
+            return res;
+        }
+        default:
+            * ppv = NULL;
+            return 1;
+
+    }
+    /*if(clsid == 1){
 
         ServerFactory *s = new ServerFactory();
         res = s->QueryInterface_(iid, ppv);
@@ -63,7 +82,7 @@ HRESULT_ GetClassObject(CLSID_  clsid, IID_  iid, void **ppv){
     else{
         * ppv = NULL;
         return 1;
-    }
+    }*/
 }
 
 

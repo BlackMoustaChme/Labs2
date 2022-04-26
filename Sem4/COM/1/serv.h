@@ -6,8 +6,8 @@ class Server: public IServer
 {
 private:
     int CountRef = 0;
-    int *a;
-    int *b;
+//    int *a;
+//    int *b;
 
 public:
     Server();

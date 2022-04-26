@@ -8,8 +8,8 @@ class IUnknown_
 {
 public:
     virtual HRESULT_ QueryInterface_(IID_ , void **ppv)=0;
-    virtual U_LONG_ AddRef();
-    virtual U_LONG_ Release();
+    virtual U_LONG_ AddRef()=0;
+    virtual U_LONG_ Release()=0;
 };
 HRESULT_ CreateInstance(CLSID_ , IID_ , void **ppv);
 HRESULT_ GetClassObject(CLSID_ , IID_ , void **ppv);
