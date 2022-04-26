@@ -15,12 +15,14 @@ print(arr_4)
 arr_5 = arr_3.reshape(2, 3)
 print(arr_5)
 print(arr_5.min(axis=1))
-print(arr_5.sum()/arr_5.size)
-arr_6 = np.arange(10)**2
+print(arr_5.sum() / arr_5.size)
+arr_6 = np.arange(10) ** 2
 print(arr_6)
 print(arr_6[1::2])
 print(arr_6[::-1])
 arr_6[1::2] = 2
 print(arr_6 == 49)
-A = np.array([-5, 4, 3, 2, -1, 0], [0, 1, -2, -3, 4, 5], dtype=np.cdouble)
+A = np.array(([-5, 4, 3, 2, -1, 0], [0, 1, -2, -3, 4, 5]))
 print(A)
+B = A[A < 0]
+print(B)

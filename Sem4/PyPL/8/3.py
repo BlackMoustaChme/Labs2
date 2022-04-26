@@ -9,4 +9,6 @@ def super_sort(rows, cols):
     B[:, 1::2] = np.sort(B[:, 1::2], axis=0)
     return A, B
 
-print(super_sort(3, 5))
+
+A, B = super_sort(3, 5)
+print('A:\n', A, '\nB:\n', B)
