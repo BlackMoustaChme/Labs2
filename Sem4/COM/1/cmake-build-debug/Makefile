@@ -154,6 +154,33 @@ ClientServerWrapper.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\1.dir\ClientServerWrapper.cpp.s
 .PHONY : ClientServerWrapper.cpp.s
 
+ClientVectorWrapper.obj: ClientVectorWrapper.cpp.obj
+
+.PHONY : ClientVectorWrapper.obj
+
+# target to build an object file
+ClientVectorWrapper.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\1.dir\ClientVectorWrapper.cpp.obj
+.PHONY : ClientVectorWrapper.cpp.obj
+
+ClientVectorWrapper.i: ClientVectorWrapper.cpp.i
+
+.PHONY : ClientVectorWrapper.i
+
+# target to preprocess a source file
+ClientVectorWrapper.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\1.dir\ClientVectorWrapper.cpp.i
+.PHONY : ClientVectorWrapper.cpp.i
+
+ClientVectorWrapper.s: ClientVectorWrapper.cpp.s
+
+.PHONY : ClientVectorWrapper.s
+
+# target to generate assembly for a file
+ClientVectorWrapper.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\1.dir\ClientVectorWrapper.cpp.s
+.PHONY : ClientVectorWrapper.cpp.s
+
 IUnknown.obj: IUnknown.cpp.obj
 
 .PHONY : IUnknown.obj
@@ -207,6 +234,60 @@ ServerFactory.s: ServerFactory.cpp.s
 ServerFactory.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\1.dir\ServerFactory.cpp.s
 .PHONY : ServerFactory.cpp.s
+
+VectorFactory_.obj: VectorFactory_.cpp.obj
+
+.PHONY : VectorFactory_.obj
+
+# target to build an object file
+VectorFactory_.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\1.dir\VectorFactory_.cpp.obj
+.PHONY : VectorFactory_.cpp.obj
+
+VectorFactory_.i: VectorFactory_.cpp.i
+
+.PHONY : VectorFactory_.i
+
+# target to preprocess a source file
+VectorFactory_.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\1.dir\VectorFactory_.cpp.i
+.PHONY : VectorFactory_.cpp.i
+
+VectorFactory_.s: VectorFactory_.cpp.s
+
+.PHONY : VectorFactory_.s
+
+# target to generate assembly for a file
+VectorFactory_.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\1.dir\VectorFactory_.cpp.s
+.PHONY : VectorFactory_.cpp.s
+
+Vector_.obj: Vector_.cpp.obj
+
+.PHONY : Vector_.obj
+
+# target to build an object file
+Vector_.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\1.dir\Vector_.cpp.obj
+.PHONY : Vector_.cpp.obj
+
+Vector_.i: Vector_.cpp.i
+
+.PHONY : Vector_.i
+
+# target to preprocess a source file
+Vector_.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\1.dir\Vector_.cpp.i
+.PHONY : Vector_.cpp.i
+
+Vector_.s: Vector_.cpp.s
+
+.PHONY : Vector_.s
+
+# target to generate assembly for a file
+Vector_.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\1.dir\Vector_.cpp.s
+.PHONY : Vector_.cpp.s
 
 main.obj: main.cpp.obj
 
@@ -301,12 +382,21 @@ help:
 	@echo ... ClientServerWrapper.obj
 	@echo ... ClientServerWrapper.i
 	@echo ... ClientServerWrapper.s
+	@echo ... ClientVectorWrapper.obj
+	@echo ... ClientVectorWrapper.i
+	@echo ... ClientVectorWrapper.s
 	@echo ... IUnknown.obj
 	@echo ... IUnknown.i
 	@echo ... IUnknown.s
 	@echo ... ServerFactory.obj
 	@echo ... ServerFactory.i
 	@echo ... ServerFactory.s
+	@echo ... VectorFactory_.obj
+	@echo ... VectorFactory_.i
+	@echo ... VectorFactory_.s
+	@echo ... Vector_.obj
+	@echo ... Vector_.i
+	@echo ... Vector_.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

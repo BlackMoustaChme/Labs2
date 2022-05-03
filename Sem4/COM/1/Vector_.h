@@ -9,8 +9,9 @@ private:
     long double y1 = 0;
     long double x2 = 0;
     long double y2 = 0;
-    long double x3 = 0;
-    long double y3 = 0;
+    long double z1 = 0;
+    long double z2 = 0;
+    long double result = 0;
 public:
     Vector_();
     ~Vector_();

@@ -88,6 +88,12 @@
 		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/ClientServerWrapper.h">
 			<Option target="1"/>
 		</Unit>
+		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/ClientVectorWrapper.cpp">
+			<Option target="1"/>
+		</Unit>
+		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/ClientVectorWrapper.h">
+			<Option target="1"/>
+		</Unit>
 		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/IClassFactory.h">
 			<Option target="1"/>
 		</Unit>
@@ -97,10 +103,25 @@
 		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/IUnknown.h">
 			<Option target="1"/>
 		</Unit>
+		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/IVector.h">
+			<Option target="1"/>
+		</Unit>
 		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/ServerFactory.cpp">
 			<Option target="1"/>
 		</Unit>
 		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/ServerFactory.h">
+			<Option target="1"/>
+		</Unit>
+		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/VectorFactory_.cpp">
+			<Option target="1"/>
+		</Unit>
+		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/VectorFactory_.h">
+			<Option target="1"/>
+		</Unit>
+		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/Vector_.cpp">
+			<Option target="1"/>
+		</Unit>
+		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/Vector_.h">
 			<Option target="1"/>
 		</Unit>
 		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/iserv.h">
