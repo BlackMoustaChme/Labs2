@@ -1,8 +1,11 @@
 #include <iostream>
-#include "VectorFactory_.h"
-#include "Vector_.h"
+#include "../headers/VectorFactory_.h"
+#include "../headers/Vector_.h"
 using std::cout;//, std::cin;
 using std::endl;
+namespace global{
+    int global_iRef = 0;
+}
 HRESULT_ VectorFactory_::CreateInstance(IID_ iid, void **ppv) {
     Vector_* vector = new Vector_();
     switch (iid) {

@@ -1,7 +1,7 @@
 #ifndef INC_1_SERV_H
 #define INC_1_SERV_H
 #include "iserv.h"
-#include "IUnknown.h"
+#include "../headers/IUnknown.h"
 class Server: public IServer
 {
 private:

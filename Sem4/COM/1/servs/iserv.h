@@ -1,6 +1,6 @@
 #ifndef INC_1_ISERV_H
 #define INC_1_ISERV_H
-#include "IUnknown.h"
+#include "../headers/IUnknown.h"
 class IServer: public IUnknown_{
 
 public:

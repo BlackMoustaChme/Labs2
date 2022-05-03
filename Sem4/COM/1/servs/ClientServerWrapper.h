@@ -2,9 +2,9 @@
 #define INC_1_CLIENTSERVERWRAPPER_H
 #include "serv.h"
 #include "serv2.h"
-#include "Vector_.h"
-#include "IClassFactory.h"
-#include "IUnknown.h"
+#include "../headers/Vector_.h"
+#include "../headers/IClassFactory.h"
+#include "../headers/IUnknown.h"
 
 class ClientServerWrapper {
 private:

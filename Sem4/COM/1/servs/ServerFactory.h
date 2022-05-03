@@ -1,7 +1,7 @@
 #ifndef INC_1_SERVERFACTORY_H
 #define INC_1_SERVERFACTORY_H
-#include "IUnknown.h"
-#include "IClassFactory.h"
+#include "../headers/IUnknown.h"
+#include "../headers/IClassFactory.h"
 class ServerFactory: public IClassFactory_{
 private:
     int CountRef = 0;
