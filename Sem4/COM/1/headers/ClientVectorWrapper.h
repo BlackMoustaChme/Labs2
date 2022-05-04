@@ -18,6 +18,7 @@ public:
     void VectorPotenoteSolavation();
     void VectorDistanceBetweenPointsR2();
     void VectorDistanceBetweenPointsR3();
+    ClientVectorWrapper& operator=(ClientVectorWrapper& cvw);
 };
 
 

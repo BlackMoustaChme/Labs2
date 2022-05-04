@@ -9,11 +9,11 @@
 #include "headers/ClientVectorWrapper.h"
 #include <windows.h>
 #include <iostream>
-#pragma once
+//#pragma once
 
-CLSID_ CLSID_Slae = 1;
+CLSID_ CLSID_Vector_ = 3;
 IID_ IID_IPrint = 1, IID_IOperation = 2;
-IID_ IID_IUnknown_ = 1, IID_ClassFactory = 2, IID_SlaeFactory = 3;
+IID_ IID_IUnknown_ = 0, IID_ClassFactory = 1, IID_VectorFactory_ = 2;
 HRESULT_ S_OK_ = 0;
 
 typedef HRESULT_ (*FunctionArg) (CLSID_, IID_, void**);

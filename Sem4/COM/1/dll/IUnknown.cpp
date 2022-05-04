@@ -1,11 +1,13 @@
 #include <iostream>
 #include "../headers/IUnknown.h"
-#include "../servs/serv.h"
-#include "../servs/serv2.h"
-#include "../servs/ServerFactory.h"
-#include "../servs/Server2Factory.h"
+//#include "../servs/serv.h"
+//#include "../servs/serv2.h"
+//#include "../servs/ServerFactory.h"
+//#include "../servs/Server2Factory.h"
+#include "../headers/IVector.h"
 #include "../headers/Vector_.h"
 #include "../headers/VectorFactory_.h"
+//#include "../headers/IClassFactory.h"
 #include <windows.h>
 #include <fstream>
 #include <string>
@@ -43,6 +45,18 @@ HRESULT_ DLLGetClassObject(CLSID_ clsid, IID_ iid, void** ppv){
 HRESULT_ CreateInstance(CLSID_  clsid, IID_  iid, void **ppv){
     HRESULT_ res;
     if(clsid == 1){
+        IClassFactory_ *pClassFactory = nullptr;
+        VectorFactory_ *VF = new VectorFactory_();
+        VF->QueryInterface_(clsid, (void**)&pClassFactory);
+        res = pClassFactory->CreateInstance(iid, ppv);
+        return res;
+    }
+    else
+    {
+        * ppv = nullptr;
+        return 1;
+    }
+    /*if(clsid == 1){
 
 
 // * Возможная реализация через фабрики
@@ -73,22 +87,28 @@ HRESULT_ CreateInstance(CLSID_  clsid, IID_  iid, void **ppv){
     else{
         * ppv = NULL;
         return 1;
-    }
+    }*/
 }
 
-HRESULT_ GetClassObject(CLSID_  clsid, IID_  iid, void **ppv){
+HRESULT_ DLLGetClassObject(CLSID_  clsid, IID_  iid, void **ppv){
     HRESULT_ res;
     switch (clsid) {
         case 1:
-        {
+        /*{
             ServerFactory *s = new ServerFactory();
             res = s->QueryInterface_(iid, ppv);
             return res;
-        }
+        }*/
         case 2:
-        {
+        /*{
             Server2Factory *s = new Server2Factory();
             res = s->QueryInterface_(iid, ppv);
+            return res;
+        }*/
+        case 3:
+        {
+            VectorFactory_ *v = new VectorFactory_();
+            res = v->QueryInterface_(iid, ppv);
             return res;
         }
         default:

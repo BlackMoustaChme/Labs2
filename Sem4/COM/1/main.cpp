@@ -13,18 +13,25 @@ int main()
     VectorFactory_* factory;
     FunctionArg GetClassObject, CreateInstance;
     FunctionNotArg FreeUnusedLibraries;
-    h = LoadLibrary("managerDll.dll");
+    h = LoadLibrary("ManagerDLL.dll");
 
     GetClassObject = (FunctionArg) GetProcAddress(h, "GetClassObject");
     FreeUnusedLibraries = (FunctionNotArg) GetProcAddress(h, "FreeUnusedLibraries");
     CreateInstance = (FunctionArg) GetProcAddress(h, "CreateInstance");
 
-    res = GetClassObject(CLSID_Slae, IID_SlaeFactory, (void**)&factory);
+    res = GetClassObject(CLSID_Vector_, IID_VectorFactory_, (void**)&factory);
     if (res == S_OK_){
         IOperations* op = NULL;
         res = factory->CreateInstance(IID_IOperation, (void**)&op);
         if (res == S_OK_){
             op->Input();
+            op->DistanceBetweenPointsR3();
+            IPrint* pr = NULL;
+            res = op->QueryInterface_(IID_IPrint, (void**)&pr);
+            if (res == S_OK_){
+                pr->Print();
+            }
+            pr->Release();
 //            op->solve();
         }
         op->Release();

@@ -1,5 +1,6 @@
 #ifndef INC_1_VECTOR__H
 #define INC_1_VECTOR__H
+#include "IUnknown.h"
 #include "IVector.h"
 
 class Vector_: public IOperations, IPrint{

@@ -6,10 +6,21 @@ using std::endl;
 namespace global{
     int global_iRef = 0;
 }
+VectorFactory_::VectorFactory_() {
+
+}
+VectorFactory_::~VectorFactory_() {
+
+}
 HRESULT_ VectorFactory_::CreateInstance(IID_ iid, void **ppv) {
     Vector_* vector = new Vector_();
     switch (iid) {
         case 1:
+        {
+            vector->QueryInterface_(iid, ppv);
+            return 0;
+        }
+        case 2:
         {
             vector->QueryInterface_(iid, ppv);
             return 0;
@@ -45,6 +56,12 @@ HRESULT_ VectorFactory_::QueryInterface_(IID_ iid, void **ppv){
             AddRef();
             return 0;
         }
+        case 2:
+        {
+            *ppv=(void *)(VectorFactory_*)this;
+            AddRef();
+            return 0;
+        }
         default:
             *ppv=NULL;
             return 1;
@@ -63,4 +80,19 @@ HRESULT_ VectorFactory_::QueryInterface_(IID_ iid, void **ppv){
         return 1;
     }
 */
+}
+U_LONG_ VectorFactory_::AddRef() {
+    CountRef++;
+    cout<<"AddReference"<<CountRef<<endl;
+    return CountRef;
+}
+U_LONG_ VectorFactory_::Release() {
+    CountRef--;
+    cout<<"DeleteReference"<<CountRef<<endl;
+    if(CountRef == 0)
+    {
+        cout<<"DeleteVectorFactoryReference"<<endl;
+        delete this;
+    }
+    return CountRef;
 }
