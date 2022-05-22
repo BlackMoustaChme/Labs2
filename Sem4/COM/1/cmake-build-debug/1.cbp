@@ -82,67 +82,94 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/ClientServerWrapper.cpp">
+		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/ManagerDLL.cpp">
 			<Option target="1"/>
 		</Unit>
-		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/ClientServerWrapper.h">
+		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/ManagerDLL.h">
 			<Option target="1"/>
 		</Unit>
-		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/ClientVectorWrapper.cpp">
+		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/ModuleInfo.h">
 			<Option target="1"/>
 		</Unit>
-		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/ClientVectorWrapper.h">
+		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/dll/Client.cpp">
 			<Option target="1"/>
 		</Unit>
-		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/IClassFactory.h">
+		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/dll/ClientVectorWrapper.cpp">
 			<Option target="1"/>
 		</Unit>
-		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/IUnknown.cpp">
+		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/dll/IUnknown.cpp">
 			<Option target="1"/>
 		</Unit>
-		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/IUnknown.h">
+		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/dll/VectorFactory_.cpp">
 			<Option target="1"/>
 		</Unit>
-		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/IVector.h">
+		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/dll/VectorPotenoteTaskFactory_.cpp">
 			<Option target="1"/>
 		</Unit>
-		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/ServerFactory.cpp">
+		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/dll/VectorPotenoteTask_.cpp">
 			<Option target="1"/>
 		</Unit>
-		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/ServerFactory.h">
+		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/dll/Vector_.cpp">
 			<Option target="1"/>
 		</Unit>
-		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/VectorFactory_.cpp">
+		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/headers/ClientVectorWrapper.h">
 			<Option target="1"/>
 		</Unit>
-		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/VectorFactory_.h">
+		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/headers/IClassFactory.h">
 			<Option target="1"/>
 		</Unit>
-		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/Vector_.cpp">
+		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/headers/IUnknown.h">
 			<Option target="1"/>
 		</Unit>
-		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/Vector_.h">
+		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/headers/IVector.h">
 			<Option target="1"/>
 		</Unit>
-		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/iserv.h">
+		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/headers/IVectorMod.h">
 			<Option target="1"/>
 		</Unit>
-		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/iserv2.h">
+		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/headers/VectorFactory_.h">
+			<Option target="1"/>
+		</Unit>
+		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/headers/VectorPotenoteTaskFactory_.h">
+			<Option target="1"/>
+		</Unit>
+		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/headers/VectorPotenoteTask_.h">
+			<Option target="1"/>
+		</Unit>
+		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/headers/Vector_.h">
 			<Option target="1"/>
 		</Unit>
 		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/main.cpp">
 			<Option target="1"/>
 		</Unit>
-		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/serv.cpp">
+		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/servs/ClientServerWrapper.cpp">
 			<Option target="1"/>
 		</Unit>
-		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/serv.h">
+		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/servs/ClientServerWrapper.h">
 			<Option target="1"/>
 		</Unit>
-		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/serv2.cpp">
+		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/servs/ServerFactory.cpp">
 			<Option target="1"/>
 		</Unit>
-		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/serv2.h">
+		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/servs/ServerFactory.h">
+			<Option target="1"/>
+		</Unit>
+		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/servs/iserv.h">
+			<Option target="1"/>
+		</Unit>
+		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/servs/iserv2.h">
+			<Option target="1"/>
+		</Unit>
+		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/servs/serv.cpp">
+			<Option target="1"/>
+		</Unit>
+		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/servs/serv.h">
+			<Option target="1"/>
+		</Unit>
+		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/servs/serv2.cpp">
+			<Option target="1"/>
+		</Unit>
+		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/servs/serv2.h">
 			<Option target="1"/>
 		</Unit>
 		<Unit filename="F:/Chernousov/labs2/Sem4/COM/1/CMakeLists.txt">
