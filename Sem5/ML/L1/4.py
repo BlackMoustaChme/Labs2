@@ -11,6 +11,7 @@ plt.plot(x, y(x) , color='blue', linewidth=3, label='y(x)')
 
 plt.grid(True)
 
+plt.savefig('ML4.png', format='png')
+
 plt.show()
 
-plt.savefig('ML4.png', format='png')

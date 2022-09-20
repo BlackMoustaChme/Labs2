@@ -14,6 +14,7 @@ plt.title('y(x)=x*x-x-6 graph')
 plt.ylabel('y - axis')
 plt.xlabel('x - axis')
 
+plt.savefig('ML3.png', format='png')
+
 plt.show()
 
-plt.savefig('ML3.png', format='png')

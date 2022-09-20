@@ -10,7 +10,10 @@ plt.title('Plot with two or more lines with different styles')
 plt.ylabel('y - axis')
 plt.xlabel('x - axis')
 plt.legend()
-plt.show()
 
 plt.savefig('ML1_3.png', format='png')
+
+plt.show()
+
+
 

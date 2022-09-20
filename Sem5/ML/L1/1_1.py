@@ -11,6 +11,7 @@ plt.title('Draw a line')
 plt.ylabel('y - axis')
 plt.xlabel('x - axis')
 
+plt.savefig('ML1_1.png', format='png')
+
 plt.show()
 
-plt.savefig('ML1_1.png', format='png')

@@ -11,6 +11,8 @@ plt.title('Two or more lines with different widths and colors with suitable lege
 plt.ylabel('y - axis')
 plt.xlabel('x - axis')
 plt.legend()
-plt.show()
 
 plt.savefig('ML1_2.png', format='png')
+
+plt.show()
+
