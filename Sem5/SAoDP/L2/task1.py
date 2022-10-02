@@ -1,5 +1,19 @@
 import numpy as np
 import timeit
+import sys
+import threading
+
+
+class recursion_depth:
+    def __init__(self, limit):
+        self.limit = limit
+        self.default_limit = sys.getrecursionlimit()
+
+    def __enter__(self):
+        sys.setrecursionlimit(self.limit)
+
+    def __exit__(self, type, value, traceback):
+        sys.setrecursionlimit(self.default_limit)
 
 
 def quicksort(array):
@@ -11,7 +25,7 @@ def quicksort(array):
 
         greater = [i for i in array[1:] if i > pivot]
 
-        return quicksort(less) + [pivot] + quicksort(greater)#Часть функции
+        return quicksort(less) + [pivot] + quicksort(greater)  # Часть функции
 
 
 def selection_sort(array):
@@ -25,17 +39,16 @@ def selection_sort(array):
 
 
 def time_check(array):
-    print("Quicksort")
-
-    start_time = timeit.default_timer()
-    quicksort(array)
-    print(timeit.default_timer() - start_time)
-
-    print("Selection sort")
-
-    start_time = timeit.default_timer()
-    selection_sort(array)
-    print(timeit.default_timer() - start_time)
+    # threading.stack_size(200000000)
+    with recursion_depth(5000):
+        print("Quicksort")
+        start_time = timeit.default_timer()
+        quicksort(array)
+        print(timeit.default_timer() - start_time)
+        print("Selection sort")
+        start_time = timeit.default_timer()
+        selection_sort(array)
+        print(timeit.default_timer() - start_time)
 
 
 def time_check2(arr_1, arr_2, arr_3):

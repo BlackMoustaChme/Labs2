@@ -1,4 +1,6 @@
 import timeit
+
+
 def tribonacci(n):
     if n in (1, 2):
         return 0
@@ -31,5 +33,6 @@ def time_check(n):
     start_time = timeit.default_timer()
     tribonacci_ax(n)
     print(timeit.default_timer() - start_time)
+
 
 print(time_check(30))

@@ -1,0 +1,173 @@
+task_3.1
+def tree(branchLen, t, width):
+    if branchLen > 5:
+        t.pensize(width)
+        t.forward(branchLen)#движение вперёд на переданную длину ветки
+        t.right(20)#поворот на 20 градусов
+        tree(branchLen - 15, t, width - 3)#рекурсивный вызов повторяющий первые два действия до истечения длины ветки
+        t.left(40)#поворот на 40 градусов после выхода из рекурсии и возвращения на корень ниже при длине < 5
+        tree(branchLen - 15, t, width - 3)#повтор алгоритма
+        t.right(20)#возвращение в позицию для отхода по корневой ветке
+        t.backward(branchLen)#движение назад
+
+
+def main():
+    t = turtle.Turtle()
+    width = 12
+    myWin = turtle.Screen()
+    t.left(90)
+    t.up()
+    t.backward(100)
+    t.down()
+    t.color("green")
+    tree(75, t, width)
+    myWin.exitonclick()
+
+task_3.2
+def tree(branchLen, t, width):
+    if branchLen > 5:
+        t.pensize(width)
+        t.forward(branchLen)#движение вперёд на переданную длину ветки
+        t.right(20)#поворот на 20 градусов
+        tree(branchLen - 15, t, width - 3)#рекурсивный вызов повторяющий первые два действия до истечения длины ветки
+        t.left(40)#поворот на 40 градусов после выхода из рекурсии и возвращения на корень ниже при длине < 5
+        tree(branchLen - 15, t, width - 3)#повтор алгоритма
+        t.right(20)#возвращение в позицию для отхода по корневой ветке
+        if branchLen < 25:
+            t.color("green")
+        else:
+            t.color("brown")
+        t.backward(branchLen)#движение назад
+
+
+def main():
+    t = turtle.Turtle()
+    width = 18
+    myWin = turtle.Screen()
+    t.left(90)
+    t.up()
+    t.backward(100)
+    t.down()
+    t.color("brown")
+    tree(90, t, width)
+    myWin.exitonclick()
+
+task_3.3
+def tree(branchLen, t):
+    if branchLen > 5:
+        angle = np.random.randint(15, 45)
+        t.forward(branchLen)#движение вперёд на переданную длину ветки
+        t.right(angle)#поворот на 20 градусов
+        tree(branchLen - 15, t)#рекурсивный вызов повторяющий первые два действия до истечения длины ветки
+        t.left(angle*2)#поворот на 40 градусов после выхода из рекурсии и возвращения на корень ниже при длине < 5
+        tree(branchLen - 15, t)#повтор алгоритма
+        t.right(angle)#возвращение в позицию для отхода по корневой ветке
+        t.backward(branchLen)#движение назад
+
+
+def main():
+    t = turtle.Turtle()
+    width = 3
+    myWin = turtle.Screen()
+    t.left(90)
+    t.up()
+    t.backward(100)
+    t.down()
+    t.pensize(width)
+    t.color("green")
+    tree(105, t)
+    myWin.exitonclick()
+
+
+task_3.4:chaos
+def tree(branchLen, t):
+    if branchLen > 5:
+        angle = np.random.randint(15, 45)
+        cut = np.random.randint(5, 20)
+        t.forward(branchLen)#движение вперёд на переданную длину ветки
+        t.right(angle)#поворот на 20 градусов
+        tree(branchLen - cut, t)#рекурсивный вызов повторяющий первые два действия до истечения длины ветки
+        t.left(angle*2)#поворот на 40 градусов после выхода из рекурсии и возвращения на корень ниже при длине < 5
+        tree(branchLen - cut, t)#повтор алгоритма
+        t.right(angle)#возвращение в позицию для отхода по корневой ветке
+        r = np.random.randint(1, 255)
+        g = np.random.randint(1, 255)
+        b = np.random.randint(1, 255)
+        t.pencolor(r, g, b)
+        t.backward(branchLen)#движение назад
+
+
+def main():
+    t = turtle.Turtle()
+    width = 3
+    myWin = turtle.Screen()
+    t.left(90)
+    t.up()
+    t.backward(100)
+    t.down()
+    t.pensize(width)
+    myWin.colormode(255)
+    #t.pencolor(181, 33, 3)
+    t.speed(0)
+    tree(105, t)
+    myWin.exitonclick()
+
+
+task5
+
+import turtle
+import numpy as np
+
+def koch_curve(size, n, t):
+    if n == 0:
+        t.forward(size)
+    else:
+        angle = np.random.randint(60, 90)
+        koch_curve(size / 3, n - 1, t)
+        t.left(angle)
+        koch_curve(size / 3, n - 1, t)
+        t.right(2*angle)
+        koch_curve(size / 3, n - 1, t)
+        t.left(angle)
+        koch_curve(size / 3, n - 1, t)
+
+def tree(branchLen, t):
+    if branchLen > 5:
+        angle = np.random.randint(45, 60)
+        t.forward(branchLen)#движение вперёд на переданную длину ветки
+        t.left(angle*2)#поворот на 20 градусов
+        tree(branchLen - 10, t)#рекурсивный вызов повторяющий первые два действия до истечения длины ветки
+        t.right(angle)#поворот на 40 градусов после выхода из рекурсии и возвращения на корень ниже при длине < 5
+        tree(branchLen - 10, t)#повтор алгоритма
+        t.left(angle*2)#возвращение в позицию для отхода по корневой ветке
+        t.backward(branchLen)#движение назад
+
+
+def main():
+    # n = int(input())
+    t = turtle.Turtle()
+    width = 2
+    myWin = turtle.Screen()
+    t.left(90)
+    t.up()
+    t.backward(100)
+    t.down()
+    t.left(90)
+    t.up()
+    t.forward(250)
+    t.down()
+    t.right(180)
+    t.pensize(width)
+    myWin.colormode(255)
+    t.pencolor(0, 255, 255)
+    t.speed(0)
+    # koch_curve(300, n, t)
+    tree(180, t)
+    myWin.exitonclick()
+
+
+main()
+
+
+
+
