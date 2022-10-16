@@ -50,18 +50,18 @@ arr[1:-1, 1:-1] = 0
 print(arr)
 
 # 8
-print("8)")
+print("#8")
 arr = np.diag([1, 2, 3, 4, 5])
 print(arr)
 
 # 9
-print("9)")
+print("#9")
 arr = np.zeros((4, 4))
 arr[::2, 1::2] = 1
 arr[1::2, ::2] = 1
 print(arr)
 
 # 10
-print("10)")
+print("#10")
 arr = np.arange("2017-03", "2017-04", dtype="datetime64[D]")
 print(arr)

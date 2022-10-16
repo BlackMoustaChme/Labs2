@@ -58,6 +58,28 @@ public class CarsDatabaseHandler implements IRepository<Cars, Integer> {
         return list;
     }
 
+    public List<Cars> getAllByUserId(Integer userIndex, boolean showAll){
+        List<Cars> list = new ArrayList<>();
+
+        String query = "";
+
+        try{
+            ResultSet resultSet = database.executeQuery(query);
+            while (resultSet.next()){
+                Cars cars = new Cars();
+                cars.setId(resultSet.getInt("user_id"));
+                cars.setBrand(resultSet.getString("brand"));
+                cars.setModel(resultSet.getString("model"));
+                cars.setColor(resultSet.getString("color"));
+                cars.setNumber(resultSet.getString("number"));
+                list.add(cars);
+            }
+        } catch (Exception ex){
+            return list;
+        }
+        return list;
+    }
+
     @Override
     public boolean add(Cars cars){
         boolean result = false;

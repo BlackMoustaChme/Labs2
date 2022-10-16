@@ -2,7 +2,9 @@ package controller;
 
 import java.io.PrintWriter;
 import backController.IController;
-import backController.BackControllerFactory;
+//import backController.BackControllerFactory;
+import backController.IControllerFactory;
+import backController.Global;
 
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -14,7 +16,7 @@ import jakarta.servlet.http.HttpSession;
 public class WebController extends HttpServlet
 {
     IController ic;
-    BackControllerFactory bcf = new BackControllerFactory();
+    IControllerFactory icf = Global.getFactory();
   protected void doPost(HttpServletRequest request, HttpServletResponse response)
   {    
     PrintWriter printWriter = null;
@@ -28,7 +30,7 @@ public class WebController extends HttpServlet
         request.setAttribute("login", login);
         switch (url) {
             case "/login":{
-                ic = bcf.createController("Login", 2,request, response);
+                ic = icf.createController("Login", 2,request, response);
                 break;
             }
             case "/listing":{
@@ -43,7 +45,7 @@ public class WebController extends HttpServlet
             default:
                 break;
         }
-
+        ic.doMethod();
 	}
 	catch (Exception ex)
 	{
@@ -60,16 +62,18 @@ public class WebController extends HttpServlet
           response.setHeader("Content-Type", "text/html;charset=UTF-8");
           switch (url) {
               case "/login":{
-                  ic = bcf.createController("Login", 1,request, response);
+                  ic = icf.createController("Login", 1,request, response);
                   break;
               }
-              case "/l":{
+              case "/listing":{
+                  ic = icf.createController("Listing", 1,request, response);
                   break;
               }
               default: {
                   break;
               }
           }
+          ic.doMethod();
       } catch (Exception ex) {
           printWriter.println("Error: "+ex.getMessage());
       }
