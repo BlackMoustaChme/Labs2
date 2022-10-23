@@ -12,7 +12,7 @@ print(" ")
 
 print("№2")
 df_metagames = pd.read_csv("metacritic_games.csv")
-df_merged = pd.merge(df, df_metagames, on=["name".lower()], how="inner")
+df_merged = pd.merge(df, df_metagames, on=["Name"], how="inner")
 print(df_merged)
 df["metacritic_rating"] = df_merged["rating"]
 print(df)
