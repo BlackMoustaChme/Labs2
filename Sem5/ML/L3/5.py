@@ -39,7 +39,7 @@ def check_vowels(x):
             count += 1
     if count >= 3:
         return True
-    return False
+    return FalseS
         
 genres = df[df["Genre"].apply(check_vowels)]
 result = {}
