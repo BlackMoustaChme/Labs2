@@ -65,7 +65,7 @@ screen = pygame.display.set_mode(WINDOW_SIZE)
 
 # Make some Buttons
 dijkstraButton = Button(ColorSettings.GREY, 0, SCREEN_WIDTH, SCREEN_WIDTH / 3, BUTTON_HEIGHT,
-                        "Dijkstra (=BFS when constant distances)")
+                        "Dijkstra")
 resetButton = Button(ColorSettings.GREY, SCREEN_WIDTH / 3, SCREEN_WIDTH, SCREEN_WIDTH / 3, BUTTON_HEIGHT * 2, "Reset")
 mazeButton = Button(ColorSettings.GREY, (SCREEN_WIDTH / 3) * 2, SCREEN_WIDTH, SCREEN_WIDTH / 6, BUTTON_HEIGHT,
                     "Maze (Prim)")
